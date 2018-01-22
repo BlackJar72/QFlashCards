@@ -15,6 +15,9 @@ public:
     explicit QFlashCards(QWidget *parent = 0);
     ~QFlashCards();
 
+private slots:
+    void on_actionExit_triggered();
+
 private:
     Ui::QFlashCards *ui;
 };

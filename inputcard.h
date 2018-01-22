@@ -3,6 +3,9 @@
 
 #include <QObject>
 #include <QWidget>
+#include <QTextEdit>
+#include <QLabel>
+#include <QVBoxLayout>
 
 class InputCard : public QWidget
 {
@@ -13,6 +16,11 @@ public:
 signals:
 
 public slots:
+
+private:
+    QLabel* question;
+    QTextEdit* answer;
+    QVBoxLayout* layout;
 };
 
 #endif // INPUTCARD_H
