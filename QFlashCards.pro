@@ -1,0 +1,35 @@
+#-------------------------------------------------
+#
+# Project created by QtCreator 2018-01-20T07:31:41
+#
+#-------------------------------------------------
+
+QT       += core gui
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+TARGET = QFlashCards
+TEMPLATE = app
+
+
+SOURCES += main.cpp\
+        qflashcards.cpp \
+    inputcard.cpp \
+    choicecard.cpp \
+    reviewcard.cpp \
+    createcard.cpp \
+    studypanel.cpp \
+    createpanel.cpp
+
+HEADERS  += qflashcards.h \
+    inputcard.h \
+    choicecard.h \
+    reviewcard.h \
+    createcard.h \
+    studypanel.h \
+    createpanel.h
+
+FORMS    += qflashcards.ui
+
+RESOURCES += \
+    assets.qrc
