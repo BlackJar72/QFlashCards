@@ -19,7 +19,9 @@ SOURCES += main.cpp\
     reviewcard.cpp \
     createcard.cpp \
     studypanel.cpp \
-    createpanel.cpp
+    createpanel.cpp \
+    choicebox.cpp \
+    cardentry.cpp
 
 HEADERS  += qflashcards.h \
     inputcard.h \
@@ -27,7 +29,9 @@ HEADERS  += qflashcards.h \
     reviewcard.h \
     createcard.h \
     studypanel.h \
-    createpanel.h
+    createpanel.h \
+    choicebox.h \
+    cardentry.h
 
 FORMS    += qflashcards.ui
 

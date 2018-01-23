@@ -70,7 +70,6 @@
     <bool>false</bool>
    </attribute>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionSave">
    <property name="text">
     <string>Save</string>
