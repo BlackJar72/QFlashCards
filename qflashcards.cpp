@@ -1,14 +1,15 @@
 #include "qflashcards.h"
 #include "ui_qflashcards.h"
-#include "inputcard.h"
+
+#include <iostream>
 
 QFlashCards::QFlashCards(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::QFlashCards)
 {
     ui->setupUi(this);
-    this->setCentralWidget(new InputCard(this));
-    this->centralWidget()->showMaximized();
+
+    show();
 }
 
 QFlashCards::~QFlashCards()
@@ -24,4 +25,32 @@ QFlashCards::~QFlashCards()
 void QFlashCards::on_actionExit_triggered()
 {
     exit(0);
+}
+
+void QFlashCards::on_actionReview_triggered()
+{
+    reviewCard = new ReviewCard(this);
+    setCentralWidget(reviewCard);
+    centralWidget()->showNormal();
+}
+
+void QFlashCards::on_actionMultiple_Choice_triggered()
+{
+    multipleChoiceCard = new ChoiceCard(this);
+    setCentralWidget(multipleChoiceCard);
+    centralWidget()->showNormal();
+}
+
+void QFlashCards::on_actionFree_Responce_triggered()
+{
+    freeResponceCard = new InputCard(this);
+    setCentralWidget(freeResponceCard);
+    centralWidget()->showNormal();
+}
+
+void QFlashCards::on_actionNewCards_triggered()
+{
+    createNewCards = new CreateCard(this);
+    setCentralWidget(createNewCards);
+    centralWidget()->showNormal();
 }

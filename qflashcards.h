@@ -2,6 +2,10 @@
 #define QFLASHCARDS_H
 
 #include <QMainWindow>
+#include "reviewcard.h"
+#include "inputcard.h"
+#include "choicecard.h"
+#include "createcard.h"
 
 namespace Ui {
 class QFlashCards;
@@ -18,8 +22,20 @@ public:
 private slots:
     void on_actionExit_triggered();
 
+    void on_actionReview_triggered();
+
+    void on_actionMultiple_Choice_triggered();
+
+    void on_actionFree_Responce_triggered();
+
+    void on_actionNewCards_triggered();
+
 private:
     Ui::QFlashCards *ui;
+    ReviewCard* reviewCard;
+    InputCard* freeResponceCard;
+    ChoiceCard* multipleChoiceCard;
+    CreateCard* createNewCards;
 };
 
 #endif // QFLASHCARDS_H
