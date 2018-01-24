@@ -8,7 +8,6 @@ QFlashCards::QFlashCards(QWidget *parent) :
     ui(new Ui::QFlashCards)
 {
     ui->setupUi(this);
-
     show();
 }
 

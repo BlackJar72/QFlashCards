@@ -8,6 +8,8 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+CONFIG += c++11
+
 TARGET = QFlashCards
 TEMPLATE = app
 
@@ -21,7 +23,8 @@ SOURCES += main.cpp\
     studypanel.cpp \
     createpanel.cpp \
     choicebox.cpp \
-    cardentry.cpp
+    cardentry.cpp \
+    cardgroup.cpp
 
 HEADERS  += qflashcards.h \
     inputcard.h \
@@ -31,7 +34,8 @@ HEADERS  += qflashcards.h \
     studypanel.h \
     createpanel.h \
     choicebox.h \
-    cardentry.h
+    cardentry.h \
+    cardgroup.h
 
 FORMS    += qflashcards.ui
 

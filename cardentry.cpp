@@ -34,19 +34,19 @@ void CardEntry::setData(const QString& question, const QString& answer,
     this->canBeFree  = canBeFree;
 }
 
-const QString CardEntry::getQuestion() const {
+QString CardEntry::getQuestion() const {
     return question;
 }
 
-const QString CardEntry::getAnswer() const {
+QString CardEntry::getAnswer() const {
     return answer;
 }
 
-const bool CardEntry::isFreeReversable() const {
+bool CardEntry::isFreeReversable() const {
     return reversable;
 }
 
-const bool CardEntry::isGoodForInput() const {
+bool CardEntry::isGoodForInput() const {
     return canBeFree;
 }
 

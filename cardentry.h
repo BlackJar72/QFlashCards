@@ -30,10 +30,10 @@ public:
     explicit CardEntry(QObject *parent = 0);
     void setData(const QString& answer, const QString& qestion,
                  bool reversable, bool canBeFree);
-    const QString getQuestion() const;
-    const QString getAnswer() const;
-    const bool isFreeReversable() const;
-    const bool isGoodForInput() const;
+    QString getQuestion() const;
+    QString getAnswer() const;
+    bool isFreeReversable() const;
+    bool isGoodForInput() const;
 
 signals:
 
