@@ -33,9 +33,9 @@ signals:
 public slots:
 
 private:
-    QList<CardEntry*> cards;
     int current;
     bool atEnd;
+    QList<CardEntry*>* cards;
 };
 
 #endif // CARDGROUP_H
