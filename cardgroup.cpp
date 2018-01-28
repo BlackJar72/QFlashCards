@@ -1,17 +1,26 @@
 #include "cardgroup.h"
+#include <iostream>
 
 CardGroup::CardGroup(QObject *parent)
-    :  QObject(parent), current(0), atEnd(false), cards(new QList<CardEntry*>()) {}
+        :  QObject(parent),
+           current(0),
+           atEnd(false),
+           cards(new QList<CardEntry*>()) {}
 
 
 CardEntry* CardGroup::getCard() {
-    if(current < cards->length()) {
-        return cards->at(current++);
+    CardEntry* out;
+    if(cards->isEmpty()) {
+        CardEntry* out = new CardEntry;
+        cards->append(out);
     } else {
-        atEnd = true;
-        current = 0;
-        return 0; // Should I do this (return null)? Some would say its not "clean."
+        out = cards->at(current++);
+        if(current >= cards->length()) {
+            shuffle();
+            reset();
+        }
     }
+    return out;
 }
 
 
@@ -38,6 +47,7 @@ void CardGroup::shuffle() {
 }
 
 void CardGroup::addCard(CardEntry* in) {
+    in->setParent(this);
     cards->append(in);
 }
 

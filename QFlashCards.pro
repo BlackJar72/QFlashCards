@@ -14,7 +14,6 @@ TARGET = QFlashCards
 TEMPLATE = app
 
 QT += widgets
-RESOURCES += assets.qrc
 
 RC_ICONS = IndexCards32.ico
 RC_FILE = QFlashCards.rc
@@ -29,7 +28,8 @@ SOURCES += main.cpp\
     createpanel.cpp \
     choicebox.cpp \
     cardentry.cpp \
-    cardgroup.cpp
+    cardgroup.cpp \
+    cardmanager.cpp
 
 HEADERS  += qflashcards.h \
     inputcard.h \
@@ -40,9 +40,15 @@ HEADERS  += qflashcards.h \
     createpanel.h \
     choicebox.h \
     cardentry.h \
-    cardgroup.h
+    cardgroup.h \
+    cardmanager.h \
 
 FORMS    += qflashcards.ui
 
 RESOURCES += \
     assets.qrc
+
+
+LIBS += /home/jared/Libraries/cpp/src/MyLibraries/ArrayContainers/bin/Release/libArrayContainers.a
+INCLUDEPATH += /home/jared/Libraries/cpp/src/MyLibraries/ArrayContainers/
+

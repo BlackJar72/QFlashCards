@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <random>
 #include <chrono>
+#include "/home/jared/Libraries/cpp/src/MyLibraries/ArrayContainers/include/ArrayContainers.h"
 
 /**
  * This class represents a set of flash cards that can be
@@ -36,6 +37,7 @@ private:
     int current;
     bool atEnd;
     QList<CardEntry*>* cards;
+    CardGroup();
 };
 
 #endif // CARDGROUP_H

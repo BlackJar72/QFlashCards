@@ -7,11 +7,14 @@
 #include <QLabel>
 #include <QVBoxLayout>
 
+#include "cardentry.h"
+
 class InputCard : public QWidget
 {
     Q_OBJECT
 public:
     explicit InputCard(QWidget *parent = 0);
+    void setData(const CardEntry* data);
 
 signals:
 

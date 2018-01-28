@@ -1,5 +1,8 @@
 #include "qflashcards.h"
 #include "ui_qflashcards.h"
+#include "cardgroup.h"
+#include "cardmanager.h"
+#include "cardentry.h"
 
 #include <iostream>
 
@@ -29,6 +32,7 @@ void QFlashCards::on_actionExit_triggered()
 void QFlashCards::on_actionReview_triggered()
 {
     reviewCard = new ReviewCard(this);
+    reviewCard->setData(CardManager::getCardManager()->getCard());
     setCentralWidget(reviewCard);
     centralWidget()->showNormal();
 }
@@ -43,6 +47,7 @@ void QFlashCards::on_actionMultiple_Choice_triggered()
 void QFlashCards::on_actionFree_Responce_triggered()
 {
     freeResponceCard = new InputCard(this);
+    freeResponceCard->setData(CardManager::getCardManager()->getCard());
     setCentralWidget(freeResponceCard);
     centralWidget()->showNormal();
 }
