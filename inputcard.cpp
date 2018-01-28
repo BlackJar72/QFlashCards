@@ -4,6 +4,7 @@ InputCard::InputCard(QWidget *parent) : QWidget(parent)
 {
     question = new QLabel(this);
     answer   = new QTextEdit(this);
+    buttons = new ButtonPanel(this);
 
     question->setText("Question");
     answer->setText("Answer");
@@ -11,6 +12,7 @@ InputCard::InputCard(QWidget *parent) : QWidget(parent)
     layout = new QVBoxLayout(this);
     layout->addWidget(question);
     layout->addWidget(answer);
+    layout->addWidget(buttons);
     this->setLayout(layout);
 
     show();

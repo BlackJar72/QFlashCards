@@ -6,6 +6,7 @@
 #include "inputcard.h"
 #include "choicecard.h"
 #include "createcard.h"
+#include "buttonpanel.h"
 
 namespace Ui {
 class QFlashCards;
@@ -36,6 +37,7 @@ private:
     InputCard* freeResponceCard;
     ChoiceCard* multipleChoiceCard;
     CreateCard* createNewCards;
+    ButtonPanel* buttons;
 };
 
 #endif // QFLASHCARDS_H

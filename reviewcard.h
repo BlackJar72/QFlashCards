@@ -8,6 +8,7 @@
 #include <QLabel>
 
 #include "cardentry.h"
+#include "buttonpanel.h"
 
 class ReviewCard : public QWidget
 {
@@ -24,6 +25,7 @@ public slots:
 private:
     QLabel* question;
     QLabel* answer;
+    ButtonPanel* buttons;
     QVBoxLayout* layout;
 };
 

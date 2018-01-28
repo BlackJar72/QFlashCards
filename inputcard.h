@@ -8,6 +8,7 @@
 #include <QVBoxLayout>
 
 #include "cardentry.h"
+#include "buttonpanel.h"
 
 class InputCard : public QWidget
 {
@@ -23,6 +24,7 @@ public slots:
 private:
     QLabel* question;
     QTextEdit* answer;
+    ButtonPanel* buttons;
     QVBoxLayout* layout;
 };
 

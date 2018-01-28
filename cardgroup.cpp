@@ -51,3 +51,10 @@ void CardGroup::addCard(CardEntry* in) {
     cards->append(in);
 }
 
+
+CardEntry* CardGroup::getNewCard() {
+    CardEntry* out = new CardEntry;
+    addCard(out);
+    return out;
+}
+

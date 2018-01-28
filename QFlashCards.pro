@@ -24,24 +24,24 @@ SOURCES += main.cpp\
     choicecard.cpp \
     reviewcard.cpp \
     createcard.cpp \
-    studypanel.cpp \
-    createpanel.cpp \
     choicebox.cpp \
     cardentry.cpp \
     cardgroup.cpp \
-    cardmanager.cpp
+    cardmanager.cpp \
+    buttonpanel.cpp \
+    mutablebutton.cpp
 
 HEADERS  += qflashcards.h \
     inputcard.h \
     choicecard.h \
     reviewcard.h \
     createcard.h \
-    studypanel.h \
-    createpanel.h \
     choicebox.h \
     cardentry.h \
     cardgroup.h \
     cardmanager.h \
+    buttonpanel.h \
+    mutablebutton.h
 
 FORMS    += qflashcards.ui
 

@@ -27,6 +27,7 @@ public:
     void sort();
     void reset();
     void addCard(CardEntry* in);
+    CardEntry* getNewCard();
 
 
 signals:
