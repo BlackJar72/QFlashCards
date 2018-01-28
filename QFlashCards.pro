@@ -13,6 +13,11 @@ CONFIG += c++11
 TARGET = QFlashCards
 TEMPLATE = app
 
+QT += widgets
+RESOURCES += assets.qrc
+
+RC_ICONS = IndexCards32.ico
+RC_FILE = QFlashCards.rc
 
 SOURCES += main.cpp\
         qflashcards.cpp \

@@ -4,4 +4,7 @@
         <file>img/IndexCard32.png</file>
         <file>img/about.png</file>
     </qresource>
+    <qresource>
+	<file>img/IndexCard32.png</file>
+    </qresource>
 </RCC>
