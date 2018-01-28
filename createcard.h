@@ -6,19 +6,25 @@
 #include <QTextEdit>
 #include <QVBoxLayout>
 
+#include "cardentry.h"
+
 class CreateCard : public QWidget
 {
     Q_OBJECT
+
 public:
     explicit CreateCard(QWidget *parent = 0);
+    void setData(CardEntry* data);
 
 signals:
 
 public slots:
+    void updateCardData();
 
 private:
+    CardEntry* card;
     QTextEdit* question;
-    QTextEdit* answer;
+    QTextEdit* answer;    
     QVBoxLayout* layout;
 };
 

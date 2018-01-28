@@ -19,6 +19,8 @@ InputCard::InputCard(QWidget *parent) : QWidget(parent)
 
 void InputCard::setData(const CardEntry* data) {
     question->setText(data->getQuestion());
-    answer->setText(data->getAnswer());
+    answer->setText("");
 }
+
+
 

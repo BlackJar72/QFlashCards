@@ -12,6 +12,7 @@
 class ReviewCard : public QWidget
 {
     Q_OBJECT
+
 public:
     explicit ReviewCard(QWidget *parent = 0);
     void setData(const CardEntry* data);

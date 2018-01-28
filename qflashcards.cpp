@@ -55,6 +55,7 @@ void QFlashCards::on_actionFree_Responce_triggered()
 void QFlashCards::on_actionNewCards_triggered()
 {
     createNewCards = new CreateCard(this);
+    createNewCards->setData(CardManager::getCardManager()->getCard());
     setCentralWidget(createNewCards);
     centralWidget()->showNormal();
 }

@@ -11,7 +11,7 @@ CardGroup::CardGroup(QObject *parent)
 CardEntry* CardGroup::getCard() {
     CardEntry* out;
     if(cards->isEmpty()) {
-        CardEntry* out = new CardEntry;
+        out = new CardEntry;
         cards->append(out);
     } else {
         out = cards->at(current++);

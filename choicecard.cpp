@@ -4,4 +4,3 @@ ChoiceCard::ChoiceCard(QWidget *parent) : QWidget(parent)
 {
 
 }
-
