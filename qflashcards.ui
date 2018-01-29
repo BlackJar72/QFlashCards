@@ -46,7 +46,7 @@
      <string>Create</string>
     </property>
     <addaction name="actionNewCards"/>
-    <addaction name="actionNew_Group"/>
+    <addaction name="actionEdit_Cards"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -132,6 +132,11 @@
   <action name="actionLoad">
    <property name="text">
     <string>Load</string>
+   </property>
+  </action>
+  <action name="actionEdit_Cards">
+   <property name="text">
+    <string>Edit Cards</string>
    </property>
   </action>
  </widget>

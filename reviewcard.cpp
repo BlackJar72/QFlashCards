@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "cardentry.h"
+#include "cardmanager.h"
 
 ReviewCard::ReviewCard(QWidget *parent) : QWidget(parent)
 {    
@@ -16,6 +17,14 @@ ReviewCard::ReviewCard(QWidget *parent) : QWidget(parent)
     layout->addWidget(buttons);
     this->setLayout(layout);
 
+    buttons->button1->setEffect("Back", 0);
+    buttons->button2->hide();
+    buttons->button3->hide();
+    buttons->button4->setEffect("Next", 0);
+
+    QObject::connect(buttons->button4, SIGNAL(clicked()),
+                     this, SLOT(nextCard()));
+
     this->show();
 }
 
@@ -23,4 +32,10 @@ ReviewCard::ReviewCard(QWidget *parent) : QWidget(parent)
 void ReviewCard::setData(const CardEntry* data) {
     question->setText(data->getQuestion());
     answer->setText(data->getAnswer());
+}
+
+
+void ReviewCard::nextCard() {
+    CardEntry* card = CardManager::getCardManager()->getCard();
+    setData(card);
 }

@@ -16,14 +16,14 @@ CreateCard::CreateCard(QWidget *parent) : QWidget(parent)
     layout->addWidget(buttons);
     this->setLayout(layout);
 
-    buttons->button1->setEffect("Back", 0);
-    buttons->button2->setEffect("Save", 1);
-    buttons->button3->setEffect("New" , 2);
-    buttons->button4->setEffect("Next", 3);
+    buttons->button1->hide();
+    buttons->button2->hide();
+    buttons->button3->setEffect("Save", 0);
+    buttons->button4->setEffect("New" , 0);
 
-    QObject::connect(buttons->button2, SIGNAL(clicked()),
-                     this, SLOT(updateCardData()));
     QObject::connect(buttons->button3, SIGNAL(clicked()),
+                     this, SLOT(updateCardData()));
+    QObject::connect(buttons->button4, SIGNAL(clicked()),
                      this, SLOT(makeNewCard()));
 
 

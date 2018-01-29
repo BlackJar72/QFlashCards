@@ -5,6 +5,8 @@
 #include <QPushButton>
 #include <QSizePolicy>
 
+#include <string>
+
 class MutableButton : public QPushButton
 {
     Q_OBJECT
