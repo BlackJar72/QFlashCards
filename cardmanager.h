@@ -16,6 +16,7 @@ public:
     void sort();
     void reset();
     void addCard(CardEntry* in);
+    CardEntry* getNewCard();
 
 private:
     CardGroup* cardGroup;

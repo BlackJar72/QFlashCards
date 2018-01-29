@@ -11,7 +11,7 @@ class MutableButton : public QPushButton
 
 public:
     explicit MutableButton(QWidget *parent = 0);
-    void setEffect(const QString& text, unsigned int effect);
+    void setEffect(char* text, unsigned int effect);
     unsigned int getEffect() const;
 
 signals:

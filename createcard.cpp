@@ -1,6 +1,8 @@
 #include "createcard.h"
+#include "cardmanager.h"
 
 #include <iostream>
+
 
 CreateCard::CreateCard(QWidget *parent) : QWidget(parent)
 {
@@ -14,8 +16,16 @@ CreateCard::CreateCard(QWidget *parent) : QWidget(parent)
     layout->addWidget(buttons);
     this->setLayout(layout);
 
-    QObject::connect(question, SIGNAL(textChanged()), this, SLOT(updateCardData()));
-    QObject::connect(answer, SIGNAL(textChanged()), this, SLOT(updateCardData()));
+    buttons->button1->setEffect("Back", 0);
+    buttons->button2->setEffect("Save", 1);
+    buttons->button3->setEffect("New" , 2);
+    buttons->button4->setEffect("Next", 3);
+
+    QObject::connect(buttons->button2, SIGNAL(clicked()),
+                     this, SLOT(updateCardData()));
+    QObject::connect(buttons->button3, SIGNAL(clicked()),
+                     this, SLOT(makeNewCard()));
+
 
     show();
 }
@@ -30,5 +40,13 @@ void CreateCard::setData(CardEntry* data) {
 
 void CreateCard::updateCardData() {
     card->setData(question->toHtml(), answer->toHtml(), true, true);
+    CardManager::getCardManager()->addCard(card);
+}
+
+
+void CreateCard::makeNewCard() {
+    updateCardData();
+    card = CardManager::getCardManager()->getNewCard();
+    setData(card);
 }
 

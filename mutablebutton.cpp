@@ -7,7 +7,7 @@ MutableButton::MutableButton(QWidget *parent) : QPushButton(parent) {
 }
 
 
-void MutableButton::setEffect(const QString& text, unsigned int effect) {
+void MutableButton::setEffect(char* text, unsigned int effect) {
     setText(text);
     effectState = effect;
 }

@@ -21,6 +21,7 @@ signals:
 
 public slots:
     void updateCardData();
+    void makeNewCard();
 
 private:
     CardEntry* card;

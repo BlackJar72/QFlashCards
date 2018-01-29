@@ -54,7 +54,6 @@ void CardGroup::addCard(CardEntry* in) {
 
 CardEntry* CardGroup::getNewCard() {
     CardEntry* out = new CardEntry;
-    addCard(out);
     return out;
 }
 

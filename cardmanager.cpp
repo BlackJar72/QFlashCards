@@ -60,3 +60,7 @@ void CardManager::reset() {
 void CardManager::addCard(CardEntry* in) {
     cardGroup->addCard(in);
 }
+
+CardEntry* CardManager::getNewCard() {
+    return cardGroup->getNewCard();
+}
