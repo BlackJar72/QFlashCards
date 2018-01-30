@@ -33,7 +33,6 @@ void EditingCard::setData(CardEntry* data) {
     card = data;
     question->setText(data->getQuestion());
     answer->setText(data->getAnswer());
-    CardManager::getCardManager()->sort();
 }
 
 

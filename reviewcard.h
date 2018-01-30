@@ -22,6 +22,7 @@ signals:
 
 public slots:
     void nextCard();
+    void lastCard();
 
 private:
     QLabel* question;

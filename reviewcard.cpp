@@ -22,6 +22,8 @@ ReviewCard::ReviewCard(QWidget *parent) : QWidget(parent)
     buttons->button3->hide();
     buttons->button4->setEffect("Next", 0);
 
+    QObject::connect(buttons->button1, SIGNAL(clicked()),
+                     this, SLOT(nextCard()));
     QObject::connect(buttons->button4, SIGNAL(clicked()),
                      this, SLOT(nextCard()));
 
@@ -36,6 +38,12 @@ void ReviewCard::setData(const CardEntry* data) {
 
 
 void ReviewCard::nextCard() {
-    CardEntry* card = CardManager::getCardManager()->getCard();
+    CardEntry* card = CardManager::getCardManager()->getNextCard();
+    setData(card);
+}
+
+
+void ReviewCard::lastCard() {
+    CardEntry* card = CardManager::getCardManager()->getPreviousCard();
     setData(card);
 }
