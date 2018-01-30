@@ -29,25 +29,30 @@ EditingCard::EditingCard(QWidget *parent) :
 }
 
 
-void EditingCard::setData(const CardEntry* data) {
+void EditingCard::setData(CardEntry* data) {
+    card = data;
     question->setText(data->getQuestion());
     answer->setText(data->getAnswer());
+    CardManager::getCardManager()->sort();
 }
 
 
 void EditingCard::previousCard() {
-
+    card = CardManager::getCardManager()->getPreviousCard();
+    setData(card);
 }
 
 void EditingCard::removeCard() {
-
+    card = CardManager::getCardManager()->removeCurrent();
+    setData(card);
 }
 
-void EditingCard::saveCard() {
-
+void EditingCard::saveCard() {    
+    card->setData(question->toHtml(), answer->toHtml(), true, true);
 }
 
 void EditingCard::nextCard() {
-
+    card = CardManager::getCardManager()->getNextCard();
+    setData(card);
 }
 

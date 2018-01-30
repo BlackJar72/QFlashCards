@@ -63,7 +63,8 @@ void QFlashCards::on_actionNewCards_triggered()
 void QFlashCards::on_actionEdit_Cards_triggered()
 {
     editCards = new EditingCard(this);
-    editCards->setData(CardManager::getCardManager()->getCard());
+    CardEntry* aCard = CardManager::getCardManager()->getCard();
+    editCards->setData(aCard);
     setCentralWidget(editCards);
     centralWidget()->showNormal();
 }

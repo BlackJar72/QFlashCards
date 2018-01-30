@@ -24,11 +24,11 @@ public slots:
     void makeNewCard();
 
 private:
-    CardEntry* card;
     QTextEdit* question;
     QTextEdit* answer;
     ButtonPanel* buttons;
     QVBoxLayout* layout;
+    CardEntry* card;
 };
 
 #endif // CREATECARD_H

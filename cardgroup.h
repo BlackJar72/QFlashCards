@@ -31,6 +31,8 @@ public:
     void reset();
     void addCard(CardEntry* in);
     CardEntry* getNewCard();
+    void removeCard(CardEntry* in);
+    CardEntry* removeCurrent();
 
 
 signals:

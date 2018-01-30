@@ -13,7 +13,7 @@ class EditingCard : public QWidget
 
 public:
     explicit EditingCard(QWidget *parent = 0);
-    void setData(const CardEntry* data);
+    void setData(CardEntry* data);
 
 signals:
 
@@ -28,6 +28,7 @@ private:
     QTextEdit* question;
     ButtonPanel* buttons;
     QVBoxLayout* layout;
+    CardEntry* card;
 };
 
 #endif // EDITCARD_H

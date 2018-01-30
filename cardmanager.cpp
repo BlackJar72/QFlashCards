@@ -72,6 +72,16 @@ CardEntry* CardManager::getCardAt(int i) {
     return cardGroup->getCardAt(i);
 }
 
+
+void CardManager::removeCard(CardEntry* in) {
+    cardGroup->removeCard(in);
+}
+
+
+CardEntry* CardManager::removeCurrent() {
+    cardGroup->removeCurrent();
+}
+
 void CardManager::shuffle() {
     cardGroup->shuffle();
 }

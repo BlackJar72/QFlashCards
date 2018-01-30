@@ -76,6 +76,20 @@ void CardGroup::reset() {
 }
 
 
+void CardGroup::removeCard(CardEntry* in) {
+    cards->removeAll(in);
+}
+
+
+CardEntry* CardGroup::removeCurrent() {
+    cards->removeAt(current);
+    if(current > cards->length()) {
+        current = 0;
+    }
+    return cards->at(current);
+}
+
+
 void CardGroup::shuffle() {
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::shuffle(cards->begin(), cards->end(),
