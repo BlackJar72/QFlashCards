@@ -24,6 +24,42 @@ CardEntry* CardGroup::getCard() {
 }
 
 
+CardEntry* CardGroup::getPreviousCard() {
+    CardEntry* out;
+    if(cards->isEmpty()) {
+        out = new CardEntry;
+        cards->append(out);
+    } else {
+        if(--current < 0) {
+            current = cards->length() - 1;
+        }
+        out = cards->at(current);
+    }
+    return out;
+}
+
+
+CardEntry* CardGroup::getNextCard() {
+    CardEntry* out;
+    if(cards->isEmpty()) {
+        out = new CardEntry;
+        cards->append(out);
+    } else {
+        current = (++current) % cards->length();
+        out = cards->at(current++);
+        if(current >= cards->length()) {
+            reset();
+        }
+    }
+    return out;
+}
+
+
+CardEntry* CardGroup::getCurrentCard() {
+    return cards->at(current);
+}
+
+
 CardEntry* CardGroup::getCardAt(int i) {
     return cards->at(i % cards->length());
 }

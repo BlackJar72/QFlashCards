@@ -11,6 +11,9 @@ public:
     CardGroup* getCardGroup();
     void makeGroup();
     CardEntry* getCard();
+    CardEntry* getPreviousCard();
+    CardEntry* getNextCard();
+    CardEntry* getCurrentCard();
     CardEntry* getCardAt(int i);
     void shuffle();
     void sort();

@@ -7,6 +7,7 @@
 #include "choicecard.h"
 #include "createcard.h"
 #include "buttonpanel.h"
+#include "editcard.h"
 
 namespace Ui {
 class QFlashCards;
@@ -31,12 +32,15 @@ private slots:
 
     void on_actionNewCards_triggered();
 
+    void on_actionEdit_Cards_triggered();
+
 private:
     Ui::QFlashCards *ui;
     ReviewCard* reviewCard;
     InputCard* freeResponceCard;
     ChoiceCard* multipleChoiceCard;
     CreateCard* createNewCards;
+    EditingCard* editCards;
     ButtonPanel* buttons;
 };
 

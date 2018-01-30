@@ -41,6 +41,33 @@ CardEntry* CardManager::getCard() {
     return out;
 }
 
+CardEntry* CardManager::getPreviousCard() {
+    CardEntry* out = cardGroup->getPreviousCard();
+    if(out == 0) {
+        out = new CardEntry;
+        cardGroup->addCard(out);
+    }
+    return out;
+}
+
+CardEntry* CardManager::getNextCard() {
+    CardEntry* out = cardGroup->getNextCard();
+    if(out == 0) {
+        out = new CardEntry;
+        cardGroup->addCard(out);
+    }
+    return out;
+}
+
+CardEntry* CardManager::getCurrentCard() {
+    CardEntry* out = cardGroup->getCurrentCard();
+    if(out == 0) {
+        out = new CardEntry;
+        cardGroup->addCard(out);
+    }
+    return out;
+}
+
 CardEntry* CardManager::getCardAt(int i) {
     return cardGroup->getCardAt(i);
 }
