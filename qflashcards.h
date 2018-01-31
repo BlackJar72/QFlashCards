@@ -21,23 +21,19 @@ public:
     explicit QFlashCards(QWidget *parent = 0);
     ~QFlashCards();
 
-private slots:
+private slots:    
+    void showSpecialText(QString text);
     void on_actionExit_triggered();
-
     void on_actionReview_triggered();
-
     void on_actionMultiple_Choice_triggered();
-
     void on_actionFree_Responce_triggered();
-
     void on_actionNewCards_triggered();
-
     void on_actionEdit_Cards_triggered();
 
 private:
     Ui::QFlashCards *ui;
     ReviewCard* reviewCard;
-    InputCard* freeResponceCard;
+    InputCard* freeResponceCard = 0;
     ChoiceCard* multipleChoiceCard;
     CreateCard* createNewCards;
     EditingCard* editCards;

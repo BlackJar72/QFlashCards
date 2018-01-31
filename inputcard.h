@@ -19,14 +19,21 @@ public:
     void setData(const CardEntry* data);
 
 signals:
+    void writeToStatus(const QString& text);
 
 public slots:
+    void trButton3();
+    void trButton4();
 
 private:
     QLabel* question;
     QTextEdit* answer;
     ButtonPanel* buttons;
     QVBoxLayout* layout;
+    QString correct;
+    void checkAnswer();
+    void nextCard();
+    void showAnswer();
 };
 
 #endif // INPUTCARD_H

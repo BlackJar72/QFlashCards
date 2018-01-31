@@ -19,6 +19,11 @@ QFlashCards::~QFlashCards()
     delete ui;
 }
 
+
+void QFlashCards::showSpecialText(QString text) {
+    statusBar()->showMessage(text, 5000);
+}
+
 /**
  * @brief QFlashCards::on_actionExit_triggered
  *
@@ -49,6 +54,8 @@ void QFlashCards::on_actionFree_Responce_triggered()
     freeResponceCard = new InputCard(this);
     freeResponceCard->setData(CardManager::getCardManager()->getCard());
     setCentralWidget(freeResponceCard);
+    connect(freeResponceCard, &InputCard::writeToStatus,
+            this, &QFlashCards::showSpecialText);
     centralWidget()->showNormal();
 }
 
@@ -70,3 +77,6 @@ void QFlashCards::on_actionEdit_Cards_triggered()
     CardManager::getCardManager()->sort();
     centralWidget()->showNormal();
 }
+
+
+

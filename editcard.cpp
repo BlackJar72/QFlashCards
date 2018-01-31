@@ -47,7 +47,7 @@ void EditingCard::removeCard() {
 }
 
 void EditingCard::saveCard() {    
-    card->setData(question->toHtml(), answer->toHtml(), true, true);
+    card->setData(question->toPlainText(), answer->toPlainText(), true, true);
 }
 
 void EditingCard::nextCard() {
