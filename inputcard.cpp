@@ -46,10 +46,10 @@ void InputCard::setData(const CardEntry* data) {
 
 void InputCard::checkAnswer() {
     if(correct == answer->toPlainText()) {
-        emit writeToStatus(correctText);
+        emit writeToStatus(MessageType::CORRECT, CardType::INPUT);
         buttons->button4->setEffect("Next", 1);
     } else {
-        emit writeToStatus(wrongText);
+        emit writeToStatus(MessageType::WRONG, CardType::INPUT);
         buttons->button3->show();
     }
 }

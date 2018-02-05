@@ -21,10 +21,10 @@ QFlashCards::~QFlashCards()
 }
 
 
-void QFlashCards::showSpecialText(QString text) {
-    statusBar()->showMessage(text, 5000);
+void QFlashCards::showSpecialText(MessageType msg, CardType caller) {
     CentralLabel* label = new CentralLabel(this);
-    label->setText("<CENTER><H1><B>" + text + "</B></H1></CENTER>");
+    label->setMessage(msg);
+    label->setCardType(caller);
     setCentralWidget(label);
 }
 

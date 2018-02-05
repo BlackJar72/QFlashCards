@@ -45,7 +45,8 @@ HEADERS  += qflashcards.h \
     buttonpanel.h \
     mutablebutton.h \
     editcard.h \
-    centrallabel.h
+    centrallabel.h \
+    enumcardtype.h
 
 FORMS    += qflashcards.ui
 

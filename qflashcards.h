@@ -22,7 +22,7 @@ public:
     ~QFlashCards();
 
 private slots:    
-    void showSpecialText(QString text);
+    void showSpecialText(MessageType msg, CardType caller);
     void on_actionExit_triggered();
     void on_actionReview_triggered();
     void on_actionMultiple_Choice_triggered();

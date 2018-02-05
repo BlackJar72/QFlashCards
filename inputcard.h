@@ -9,6 +9,7 @@
 
 #include "cardentry.h"
 #include "buttonpanel.h"
+#include "enumcardtype.h"
 
 class InputCard : public QWidget
 {
@@ -19,7 +20,7 @@ public:
     void setData(const CardEntry* data);
 
 signals:
-    void writeToStatus(const QString& text);
+    void writeToStatus(MessageType msg, CardType identity);
 
 public slots:
     void trButton3();
