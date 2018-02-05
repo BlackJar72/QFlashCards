@@ -30,7 +30,8 @@ SOURCES += main.cpp\
     cardmanager.cpp \
     buttonpanel.cpp \
     mutablebutton.cpp \
-    editcard.cpp
+    editcard.cpp \
+    centrallabel.cpp
 
 HEADERS  += qflashcards.h \
     inputcard.h \
@@ -43,7 +44,8 @@ HEADERS  += qflashcards.h \
     cardmanager.h \
     buttonpanel.h \
     mutablebutton.h \
-    editcard.h
+    editcard.h \
+    centrallabel.h
 
 FORMS    += qflashcards.ui
 

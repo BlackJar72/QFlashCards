@@ -1,6 +1,5 @@
 #include "reviewcard.h"
 #include <QVBoxLayout>
-#include <iostream>
 
 #include "cardentry.h"
 #include "cardmanager.h"

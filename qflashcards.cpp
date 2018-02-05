@@ -3,8 +3,9 @@
 #include "cardgroup.h"
 #include "cardmanager.h"
 #include "cardentry.h"
-
-#include <iostream>
+#include "centrallabel.h"
+#include <QLabel>
+#include <QSizePolicy>
 
 QFlashCards::QFlashCards(QWidget *parent) :
     QMainWindow(parent),
@@ -22,6 +23,9 @@ QFlashCards::~QFlashCards()
 
 void QFlashCards::showSpecialText(QString text) {
     statusBar()->showMessage(text, 5000);
+    CentralLabel* label = new CentralLabel(this);
+    label->setText("<CENTER><H1><B>" + text + "</B></H1></CENTER>");
+    setCentralWidget(label);
 }
 
 /**
