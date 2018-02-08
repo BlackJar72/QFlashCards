@@ -13,11 +13,12 @@ CardEntry* CardGroup::getCard() {
     if(cards->isEmpty()) {
         out = new CardEntry;
     } else {
-        out = cards->at(current++);
+        current++;
         if(current >= cards->length()) {
             shuffle();
             reset();
         }
+        out = cards->at(current);
     }
     return out;
 }
@@ -27,7 +28,6 @@ CardEntry* CardGroup::getPreviousCard() {
     CardEntry* out;
     if(cards->isEmpty()) {
         out = new CardEntry;
-        cards->append(out);
     } else {
         if(--current < 0) {
             current = cards->length() - 1;
@@ -42,13 +42,9 @@ CardEntry* CardGroup::getNextCard() {
     CardEntry* out;
     if(cards->isEmpty()) {
         out = new CardEntry;
-        cards->append(out);
     } else {
         current = (++current) % cards->length();
         out = cards->at(current);
-        if(current >= cards->length()) {
-            reset();
-        }
     }
     return out;
 }
@@ -70,7 +66,7 @@ void CardGroup::sort() {
 
 
 void CardGroup::reset() {
-    current = 0;
+    current = -1;
     atEnd = false;
 }
 

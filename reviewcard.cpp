@@ -22,7 +22,7 @@ ReviewCard::ReviewCard(QWidget *parent) : QWidget(parent)
     buttons->button4->setEffect("Next", 0);
 
     QObject::connect(buttons->button1, SIGNAL(clicked()),
-                     this, SLOT(nextCard()));
+                     this, SLOT(lastCard()));
     QObject::connect(buttons->button4, SIGNAL(clicked()),
                      this, SLOT(nextCard()));
 

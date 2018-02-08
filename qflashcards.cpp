@@ -25,6 +25,9 @@ void QFlashCards::showSpecialText(MessageType msg, CardType caller) {
     CentralLabel* label = new CentralLabel(this);
     label->setMessage(msg);
     label->setCardType(caller);
+    connect(label, &CentralLabel::signalTryAgain, this, &QFlashCards::gotoCard);
+    connect(label, &CentralLabel::signalNextCard, this, &QFlashCards::gotoNextCard);
+    connect(label, &CentralLabel::signalShowAnswer, this, &QFlashCards::gotoShowAnswer);
     setCentralWidget(label);
 }
 
@@ -93,6 +96,35 @@ void QFlashCards::gotoCard(CardType card) {
     }
 }
 
+
+
+void QFlashCards::gotoNextCard(CardType card) {
+    switch(card) {
+        case CardType::INPUT:
+            on_actionFree_Responce_triggered();
+            break;
+        default:
+            break;
+    }
+}
+
+
+
+void QFlashCards::gotoShowAnswer(CardType card) {
+    switch(card) {
+        case CardType::INPUT:
+            freeResponceCard = new InputCard(this);
+            freeResponceCard->setData(CardManager::getCardManager()->getCurrentCard());
+            setCentralWidget(freeResponceCard);
+            connect(freeResponceCard, &InputCard::writeToStatus,
+                    this, &QFlashCards::showSpecialText);
+            freeResponceCard->showAnswer();
+            centralWidget()->showNormal();
+            break;
+        default:
+            break;
+    }
+}
 
 void QFlashCards::gotoFreeResponce()
 {

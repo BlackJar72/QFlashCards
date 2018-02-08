@@ -31,6 +31,8 @@ private slots:
     void on_actionNewCards_triggered();
     void on_actionEdit_Cards_triggered();
     void gotoCard(CardType card);
+    void gotoNextCard(CardType card);
+    void gotoShowAnswer(CardType card);
 
 private:
     Ui::QFlashCards *ui;

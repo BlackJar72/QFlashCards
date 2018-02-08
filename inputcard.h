@@ -18,6 +18,7 @@ class InputCard : public QWidget
 public:
     explicit InputCard(QWidget *parent = 0);
     void setData(const CardEntry* data);
+    void showAnswer();
 
 signals:
     void writeToStatus(MessageType msg, CardType identity);
@@ -34,7 +35,6 @@ private:
     QString correct;
     void checkAnswer();
     void nextCard();
-    void showAnswer();
 };
 
 #endif // INPUTCARD_H
