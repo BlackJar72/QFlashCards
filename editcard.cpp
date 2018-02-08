@@ -1,22 +1,22 @@
 #include "editcard.h"
 #include "cardmanager.h"
 
-EditingCard::EditingCard(QWidget *parent) :
-            QWidget(parent),
-            answer(new QTextEdit),
-            question(new QTextEdit),
-            buttons(new ButtonPanel),
-            layout(new QVBoxLayout) {
+EditingCard::EditingCard(QWidget *parent) : QWidget(parent) {
 
-    buttons->button1->setEffect("&Back", 0);
-    buttons->button2->setEffect("Delete", 0);
-    buttons->button3->setEffect("&Save", 0);
-    buttons->button4->setEffect("&Next", 0);
+    answer = new QTextEdit(this);
+    question = new QTextEdit(this);
+    buttons = new ButtonPanel(this);
+    layout = new QVBoxLayout(this);
 
     layout->addWidget(question);
     layout->addWidget(answer);
     layout->addWidget(buttons);
     setLayout(layout);
+
+    buttons->button1->setEffect("&Back", 0);
+    buttons->button2->setEffect("Delete", 0);
+    buttons->button3->setEffect("&Save", 0);
+    buttons->button4->setEffect("&Next", 0);
 
     QObject::connect(buttons->button1, SIGNAL(clicked()),
                      this, SLOT(previousCard()));

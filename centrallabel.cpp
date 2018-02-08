@@ -10,13 +10,20 @@ CentralLabel::CentralLabel(QWidget *parent) :
     QSizePolicy policy = label->sizePolicy();
     policy.setVerticalPolicy(QSizePolicy::Expanding);
     buttons->button1->hide();
+
     buttons->button2->hide();
     buttons->button3->hide();
     buttons->button4->hide();
+
     label->setSizePolicy(policy);
     layout->addWidget(label);
     layout->addWidget(buttons);
     setLayout(layout);
+
+    connect(buttons->button3, SIGNAL(clicked()),
+            this, SLOT(trButton3()));
+    connect(buttons->button4, SIGNAL(clicked()),
+            this, SLOT(trButton4()));
 }
 
 
@@ -28,15 +35,15 @@ void CentralLabel::setText(QString text) {
 
 void CentralLabel::setCorrect() {
     setText("Correct!");
-    setButton(buttons->button4, "Next", 0);
+    setButton(buttons->button4, "Next", MessageType::CORRECT);
     buttons->button3->hide();
 }
 
 
 void CentralLabel::setWrong() {
     setText("Wrong!");
-    setButton(buttons->button4, "Try Again", 1);
-    setButton(buttons->button3, "Show Answer", 1);
+    setButton(buttons->button4, "Try Again", MessageType::WRONG);
+    setButton(buttons->button3, "Show Answer", MessageType::WRONG);
 }
 
 
@@ -61,5 +68,25 @@ void CentralLabel::setMessage(MessageType msg) {
         break;
     default:
         break;
+    }
+}
+
+
+
+void CentralLabel::trButton3() {
+    emit signalShowAnswer(stimulus);
+}
+
+
+void CentralLabel::trButton4() {
+    switch(buttons->button4->getEffect()) {
+        case MessageType::CORRECT:
+            emit signalNextCard(stimulus);
+            break;
+        case MessageType::WRONG:
+            emit signalTryAgain((stimulus));
+            break;
+        default:
+            break;
     }
 }

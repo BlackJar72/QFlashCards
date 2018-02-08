@@ -20,8 +20,13 @@ public:
     void setMessage(MessageType msg);
 
 signals:
+    void signalNextCard(CardType card);
+    void signalTryAgain(CardType card);
+    void signalShowAnswer(CardType card);
 
 public slots:
+    void trButton3();
+    void trButton4();
 
 private:
     QLabel* label;

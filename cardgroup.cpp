@@ -12,7 +12,6 @@ CardEntry* CardGroup::getCard() {
     CardEntry* out;
     if(cards->isEmpty()) {
         out = new CardEntry;
-        cards->append(out);
     } else {
         out = cards->at(current++);
         if(current >= cards->length()) {
@@ -46,7 +45,7 @@ CardEntry* CardGroup::getNextCard() {
         cards->append(out);
     } else {
         current = (++current) % cards->length();
-        out = cards->at(current++);
+        out = cards->at(current);
         if(current >= cards->length()) {
             reset();
         }

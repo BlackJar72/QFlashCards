@@ -83,4 +83,26 @@ void QFlashCards::on_actionEdit_Cards_triggered()
 }
 
 
+void QFlashCards::gotoCard(CardType card) {
+    switch(card) {
+        case CardType::INPUT:
+            gotoFreeResponce();
+            break;
+        default:
+            break;
+    }
+}
+
+
+void QFlashCards::gotoFreeResponce()
+{
+    freeResponceCard = new InputCard(this);
+    freeResponceCard->setData(CardManager::getCardManager()->getCurrentCard());
+    setCentralWidget(freeResponceCard);
+    connect(freeResponceCard, &InputCard::writeToStatus,
+            this, &QFlashCards::showSpecialText);
+    centralWidget()->showNormal();
+}
+
+
 

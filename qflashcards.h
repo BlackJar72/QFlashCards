@@ -8,6 +8,7 @@
 #include "createcard.h"
 #include "buttonpanel.h"
 #include "editcard.h"
+#include "enumcardtype.h"
 
 namespace Ui {
 class QFlashCards;
@@ -29,6 +30,7 @@ private slots:
     void on_actionFree_Responce_triggered();
     void on_actionNewCards_triggered();
     void on_actionEdit_Cards_triggered();
+    void gotoCard(CardType card);
 
 private:
     Ui::QFlashCards *ui;
@@ -38,6 +40,7 @@ private:
     CreateCard* createNewCards;
     EditingCard* editCards;
     ButtonPanel* buttons;
+    void gotoFreeResponce();
 };
 
 #endif // QFLASHCARDS_H
