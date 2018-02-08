@@ -101,3 +101,7 @@ void CardManager::addCard(CardEntry* in) {
 CardEntry* CardManager::getNewCard() {
     return cardGroup->getNewCard();
 }
+
+QList<CardEntry*>* CardManager::getDataModel() {
+	return cardGroup->getDataModel();
+}

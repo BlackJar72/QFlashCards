@@ -7,7 +7,6 @@
 #include <algorithm>
 #include <random>
 #include <chrono>
-#include "/home/jared/Libraries/cpp/src/MyLibraries/ArrayContainers/include/ArrayContainers.h"
 
 /**
  * This class represents a set of flash cards that can be
@@ -33,6 +32,7 @@ public:
     CardEntry* getNewCard();
     void removeCard(CardEntry* in);
     CardEntry* removeCurrent();
+	QList<CardEntry*>* getDataModel();
 
 
 signals:

@@ -5,6 +5,11 @@
 #include <QRadioButton>
 #include <QButtonGroup>
 #include <QLabel>
+#include <QGridLayout>
+#inlucde <array>
+#include <algorithm>
+#include <random>
+#include <chrono>
 
 class ChoiceBox : public QWidget
 {
@@ -12,17 +17,20 @@ class ChoiceBox : public QWidget
 	
 public:
     explicit ChoiceBox(QWidget *parent = 0);
+	void setData(const CardEntry* data);
+	void showAnswer() const;
 
 signals:
 
 public slots:
 
 private:
-    // TODO: Consider learning / using Qt collections instead of
-    // a raw array (or stl?).
-    QRadioButton* choices; // Should be 4 elements array (for now)
-	QLabel* labels;
+	QLabel* question;
+    array<QRadioButton*, 4> choiceButtons; 
     QButtonGroup* grouping;
+	array<QLabel*, 4> choiceLabels;
+	QGridLayout* layout;
+	int correctChoice;
 };
 
 #endif // CHOICEBOX_H

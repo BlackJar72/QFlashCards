@@ -102,3 +102,10 @@ CardEntry* CardGroup::getNewCard() {
     return out;
 }
 
+
+QList<CardEntry*> getDataModel() {
+	// This better use a copy constructor...
+	QList<CardEntry*> out = (*data);
+	return &out;
+}
+

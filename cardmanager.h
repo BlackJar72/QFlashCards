@@ -2,6 +2,7 @@
 #define CARDMANAGER_H
 #include "cardgroup.h"
 #include "cardentry.h"
+#include <QList>
 
 class CardManager
 {
@@ -22,6 +23,7 @@ public:
     CardEntry* getNewCard();
     void removeCard(CardEntry* in);
     CardEntry* removeCurrent();
+	QList<CardEntry*> getDataModel();
 
 private:
     CardGroup* cardGroup;
