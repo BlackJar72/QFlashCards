@@ -23,7 +23,7 @@ public:
     CardEntry* getNewCard();
     void removeCard(CardEntry* in);
     CardEntry* removeCurrent();
-	QList<CardEntry*> getDataModel();
+    QList<CardEntry*>* getDataModel();
 
 private:
     CardGroup* cardGroup;

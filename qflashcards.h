@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include "reviewcard.h"
 #include "inputcard.h"
-#include "choicecard.h"
 #include "createcard.h"
 #include "buttonpanel.h"
 #include "editcard.h"
@@ -26,7 +25,6 @@ private slots:
     void showSpecialText(MessageType msg, CardType caller);
     void on_actionExit_triggered();
     void on_actionReview_triggered();
-    void on_actionMultiple_Choice_triggered();
     void on_actionFree_Responce_triggered();
     void on_actionNewCards_triggered();
     void on_actionEdit_Cards_triggered();
@@ -34,11 +32,14 @@ private slots:
     void gotoNextCard(CardType card);
     void gotoShowAnswer(CardType card);
 
+    void on_actionLoad_triggered();
+
+    void on_actionSave_triggered();
+
 private:
     Ui::QFlashCards *ui;
     ReviewCard* reviewCard;
     InputCard* freeResponceCard = 0;
-    ChoiceCard* multipleChoiceCard;
     CreateCard* createNewCards;
     EditingCard* editCards;
     ButtonPanel* buttons;

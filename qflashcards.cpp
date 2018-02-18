@@ -6,6 +6,10 @@
 #include "centrallabel.h"
 #include <QLabel>
 #include <QSizePolicy>
+#include <QFileDialog>
+#include "filehandler.h"
+
+//#include <iostream>
 
 QFlashCards::QFlashCards(QWidget *parent) :
     QMainWindow(parent),
@@ -46,13 +50,6 @@ void QFlashCards::on_actionReview_triggered()
     reviewCard = new ReviewCard(this);
     reviewCard->setData(CardManager::getCardManager()->getCard());
     setCentralWidget(reviewCard);
-    centralWidget()->showNormal();
-}
-
-void QFlashCards::on_actionMultiple_Choice_triggered()
-{
-    multipleChoiceCard = new ChoiceCard(this);
-    setCentralWidget(multipleChoiceCard);
     centralWidget()->showNormal();
 }
 
@@ -137,4 +134,24 @@ void QFlashCards::gotoFreeResponce()
 }
 
 
+void QFlashCards::on_actionLoad_triggered()
+{
+    QString fileName
+            = QFileDialog::getOpenFileName(
+                this, tr("Open File"),
+                QCoreApplication::applicationDirPath(),
+                tr("Flashcards (*.qfcml, *xml)"));
+    FileHandler handler;
+    handler.readFile(fileName);
+}
 
+void QFlashCards::on_actionSave_triggered()
+{
+    QString fileName
+            = QFileDialog::getSaveFileName(
+                this, tr("Save Flashcards"),
+                QCoreApplication::applicationDirPath(),
+                tr("Flashcards (*.qfcml, *xml)"));
+    FileHandler handler;
+    handler.saveFile(fileName);
+}

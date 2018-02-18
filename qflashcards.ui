@@ -38,7 +38,6 @@
      <string>Use</string>
     </property>
     <addaction name="actionReview"/>
-    <addaction name="actionMultiple_Choice"/>
     <addaction name="actionFree_Responce"/>
    </widget>
    <widget class="QMenu" name="menuCreate">
@@ -93,14 +92,6 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+R</string>
-   </property>
-  </action>
-  <action name="actionMultiple_Choice">
-   <property name="text">
-    <string>Multiple Choice</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+Shift+M</string>
    </property>
   </action>
   <action name="actionFree_Responce">

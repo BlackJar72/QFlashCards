@@ -21,24 +21,21 @@ RC_FILE = QFlashCards.rc
 SOURCES += main.cpp\
         qflashcards.cpp \
     inputcard.cpp \
-    choicecard.cpp \
     reviewcard.cpp \
     createcard.cpp \
-    choicebox.cpp \
     cardentry.cpp \
     cardgroup.cpp \
     cardmanager.cpp \
     buttonpanel.cpp \
     mutablebutton.cpp \
     editcard.cpp \
-    centrallabel.cpp
+    centrallabel.cpp \
+    filehandler.cpp
 
 HEADERS  += qflashcards.h \
     inputcard.h \
-    choicecard.h \
     reviewcard.h \
     createcard.h \
-    choicebox.h \
     cardentry.h \
     cardgroup.h \
     cardmanager.h \
@@ -46,7 +43,8 @@ HEADERS  += qflashcards.h \
     mutablebutton.h \
     editcard.h \
     centrallabel.h \
-    enumcardtype.h
+    enumcardtype.h \
+    filehandler.h
 
 FORMS    += qflashcards.ui
 
