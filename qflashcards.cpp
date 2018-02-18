@@ -140,7 +140,7 @@ void QFlashCards::on_actionLoad_triggered()
             = QFileDialog::getOpenFileName(
                 this, tr("Open File"),
                 QCoreApplication::applicationDirPath(),
-                tr("Flashcards (*.qfcml, *xml)"));
+                tr("Flashcards (*.qfcml)"));
     FileHandler handler;
     handler.readFile(fileName);
 }
@@ -151,7 +151,7 @@ void QFlashCards::on_actionSave_triggered()
             = QFileDialog::getSaveFileName(
                 this, tr("Save Flashcards"),
                 QCoreApplication::applicationDirPath(),
-                tr("Flashcards (*.qfcml, *xml)"));
+                tr("Flashcards (*.qfcml)"));
     FileHandler handler;
     handler.saveFile(fileName);
 }

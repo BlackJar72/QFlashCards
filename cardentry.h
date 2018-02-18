@@ -28,7 +28,7 @@ class CardEntry : public QObject
 
 public:
     explicit CardEntry(QObject *parent = 0);
-    void setData(const QString& answer, const QString& qestion,
+    void setData(const QString& question, const QString& answer,
                  bool reversable, bool canBeFree);
     QString getQuestion() const;
     QString getAnswer() const;

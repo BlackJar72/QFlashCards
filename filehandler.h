@@ -15,6 +15,7 @@ public:
 signals:
 
 public slots:
+
 };
 
 #endif // FILEHANDLER_H
