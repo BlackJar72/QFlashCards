@@ -2,6 +2,7 @@
 #define FILEHANDLER_H
 
 #include <QObject>
+#include <QFile>
 
 class FileHandler : public QObject
 {

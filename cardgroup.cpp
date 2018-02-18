@@ -43,7 +43,8 @@ CardEntry* CardGroup::getNextCard() {
     if(cards->isEmpty()) {
         out = new CardEntry;
     } else {
-        current = (++current) % cards->length();
+        current++;
+        current %= cards->length();
         out = cards->at(current);
     }
     return out;
@@ -55,18 +56,13 @@ CardEntry* CardGroup::getCurrentCard() {
 }
 
 
-CardEntry* CardGroup::getCardAt(int i) {
-    return cards->at(i % cards->length());
-}
-
-
 void CardGroup::sort() {
     std::sort(cards->begin(), cards->end());
 }
 
 
 void CardGroup::reset() {
-    current = -1;
+    current = 0;
     atEnd = false;
 }
 
@@ -103,10 +99,9 @@ CardEntry* CardGroup::getNewCard() {
 }
 
 
-QList<CardEntry*>* CardGroup::getDataModel() {
-    // This better use a copy constructor...
-    QList<CardEntry*> dat = (*cards);
-    QList<CardEntry*> out =  dat;
-	return &out;
+CardEntry* CardGroup::getCardAt(int i) {
+    if((i >= 0) && (i < cards->length())) {
+        return cards->at(i);
+    } else return 0;
 }
 

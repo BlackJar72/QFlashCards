@@ -36,6 +36,8 @@ private slots:
 
     void on_actionSave_triggered();
 
+    void on_actionNew_triggered();
+
 private:
     Ui::QFlashCards *ui;
     ReviewCard* reviewCard;

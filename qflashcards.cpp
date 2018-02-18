@@ -155,3 +155,9 @@ void QFlashCards::on_actionSave_triggered()
     FileHandler handler;
     handler.saveFile(fileName);
 }
+
+void QFlashCards::on_actionNew_triggered()
+{
+    CardManager::getCardManager()->newCardGroup();
+    on_actionNewCards_triggered();
+}

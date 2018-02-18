@@ -32,7 +32,6 @@ public:
     CardEntry* getNewCard();
     void removeCard(CardEntry* in);
     CardEntry* removeCurrent();
-    QList<CardEntry*>* getDataModel();
 
 
 signals:

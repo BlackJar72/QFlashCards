@@ -102,6 +102,7 @@ CardEntry* CardManager::getNewCard() {
     return cardGroup->getNewCard();
 }
 
-QList<CardEntry*>* CardManager::getDataModel() {
-	return cardGroup->getDataModel();
+void CardManager::newCardGroup() {
+    delete cardGroup;
+    cardGroup = new CardGroup(0);
 }
