@@ -55,14 +55,26 @@ CardEntry* CardGroup::getCurrentCard() {
     return cards->at(current);
 }
 
+bool compQSPtr(CardEntry* a, CardEntry* b) {
+    return ((*a).getQuestion().compare((*b).getQuestion()) < 0);
+}
+
+bool (*compPtr)(CardEntry*, CardEntry*) = compQSPtr;
+
 
 void CardGroup::sort() {
-    std::sort(cards->begin(), cards->end());
+    std::sort(cards->begin(), cards->end(), compPtr);
 }
 
 
 void CardGroup::reset() {
     current = 0;
+    atEnd = false;
+}
+
+
+void CardGroup::preset() {
+    current = -1;
     atEnd = false;
 }
 

@@ -87,11 +87,16 @@ void CardManager::shuffle() {
 }
 
 void CardManager::sort() {
-    cardGroup->shuffle();
+    cardGroup->sort();
 }
 
 void CardManager::reset() {
     cardGroup->reset();
+}
+
+
+void CardManager::preset() {
+    cardGroup->preset();
 }
 
 void CardManager::addCard(CardEntry* in) {

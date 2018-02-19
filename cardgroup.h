@@ -28,6 +28,7 @@ public:
     void shuffle();
     void sort();
     void reset();
+    void preset();
     void addCard(CardEntry* in);
     CardEntry* getNewCard();
     void removeCard(CardEntry* in);

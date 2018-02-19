@@ -48,6 +48,8 @@ void QFlashCards::on_actionExit_triggered()
 void QFlashCards::on_actionReview_triggered()
 {
     reviewCard = new ReviewCard(this);
+    CardManager::getCardManager()->shuffle();
+    CardManager::getCardManager()->reset();
     reviewCard->setData(CardManager::getCardManager()->getCard());
     setCentralWidget(reviewCard);
     centralWidget()->showNormal();
@@ -56,6 +58,8 @@ void QFlashCards::on_actionReview_triggered()
 void QFlashCards::on_actionFree_Responce_triggered()
 {
     freeResponceCard = new InputCard(this);
+    CardManager::getCardManager()->shuffle();
+    CardManager::getCardManager()->reset();
     freeResponceCard->setData(CardManager::getCardManager()->getCard());
     setCentralWidget(freeResponceCard);
     connect(freeResponceCard, &InputCard::writeToStatus,
@@ -66,15 +70,18 @@ void QFlashCards::on_actionFree_Responce_triggered()
 void QFlashCards::on_actionNewCards_triggered()
 {
     createNewCards = new CreateCard(this);
-    createNewCards->setData(CardManager::getCardManager()->getNewCard());
-    setCentralWidget(createNewCards);    
     CardManager::getCardManager()->sort();
+    CardManager::getCardManager()->reset();
+    createNewCards->setData(CardManager::getCardManager()->getNewCard());
+    setCentralWidget(createNewCards);
     centralWidget()->showNormal();
 }
 
 void QFlashCards::on_actionEdit_Cards_triggered()
 {
     editCards = new EditingCard(this);
+    CardManager::getCardManager()->sort();
+    CardManager::getCardManager()->preset();
     CardEntry* aCard = CardManager::getCardManager()->getCard();
     editCards->setData(aCard);
     setCentralWidget(editCards);    
