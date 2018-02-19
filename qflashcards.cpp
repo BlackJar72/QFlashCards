@@ -190,6 +190,7 @@ void QFlashCards::on_actionLicense_triggered()
 {
     QTextBrowser* helpview = new QTextBrowser;
     helpview->setEnabled(true);
+    helpview->setOpenLinks(true);
     helpview->setSource(QString("qrc:///html/GPL3.html"));
     setCentralWidget(helpview);
 }
