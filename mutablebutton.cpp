@@ -13,6 +13,13 @@ void MutableButton::setEffect(char* text, unsigned int effect) {
 }
 
 
+void MutableButton::setEffect(QString text, unsigned int effect) {
+    setText(text);
+    effectState = effect;
+
+}
+
+
 unsigned int MutableButton::getEffect() const {
     return effectState;
 }

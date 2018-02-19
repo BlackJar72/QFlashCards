@@ -38,6 +38,12 @@ private slots:
 
     void on_actionNew_triggered();
 
+    void on_actionHelp_triggered();
+
+    void on_actionAbout_triggered();
+
+    void on_actionLicense_triggered();
+
 private:
     Ui::QFlashCards *ui;
     ReviewCard* reviewCard;

@@ -19,7 +19,7 @@ CreateCard::CreateCard(QWidget *parent) : QWidget(parent)
     buttons->button1->hide();
     buttons->button2->hide();
     buttons->button3->hide();
-    buttons->button4->setEffect("Save and &New" , 0);
+    buttons->button4->setEffect(tr("Save and &New"), 0);
 
     QObject::connect(buttons->button4, SIGNAL(clicked()),
                      this, SLOT(makeNewCard()));

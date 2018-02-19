@@ -16,10 +16,10 @@ ReviewCard::ReviewCard(QWidget *parent) : QWidget(parent)
     layout->addWidget(buttons);
     this->setLayout(layout);
 
-    buttons->button1->setEffect("Back", 0);
+    buttons->button1->setEffect(tr("Back"), 0);
     buttons->button2->hide();
     buttons->button3->hide();
-    buttons->button4->setEffect("Next", 0);
+    buttons->button4->setEffect(tr("Next"), 0);
 
     QObject::connect(buttons->button1, SIGNAL(clicked()),
                      this, SLOT(lastCard()));

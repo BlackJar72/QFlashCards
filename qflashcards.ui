@@ -38,6 +38,7 @@
      <string>Use</string>
     </property>
     <addaction name="actionReview"/>
+    <addaction name="separator"/>
     <addaction name="actionFree_Responce"/>
    </widget>
    <widget class="QMenu" name="menuCreate">
@@ -54,6 +55,7 @@
     <addaction name="separator"/>
     <addaction name="actionHelp"/>
     <addaction name="separator"/>
+    <addaction name="actionLicense"/>
     <addaction name="actionAbout"/>
    </widget>
    <addaction name="menuFile"/>
@@ -96,7 +98,7 @@
   </action>
   <action name="actionFree_Responce">
    <property name="text">
-    <string>Free Responce</string>
+    <string>Quiz</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+Return</string>
@@ -153,6 +155,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+E</string>
+   </property>
+  </action>
+  <action name="actionLicense">
+   <property name="text">
+    <string>License</string>
    </property>
   </action>
  </widget>

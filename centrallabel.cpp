@@ -48,7 +48,7 @@ void CentralLabel::setWrong() {
 
 
 void CentralLabel::setButton(MutableButton* button, char* text, int value) {
-    button->setEffect(text, value);
+    button->setEffect(tr(text), value);
     button->show();
 }
 

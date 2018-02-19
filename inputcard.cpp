@@ -13,8 +13,8 @@ InputCard::InputCard(QWidget *parent) : QWidget(parent)
     answer   = new QTextEdit(this);
     buttons = new ButtonPanel(this);
 
-    question->setText("Question");
-    answer->setText("Answer");
+    question->setText(tr("Question"));
+    answer->setText(tr("Answer"));
 
     layout = new QVBoxLayout(this);
     layout->addWidget(question);
@@ -24,9 +24,9 @@ InputCard::InputCard(QWidget *parent) : QWidget(parent)
 
     buttons->button1->hide();
     buttons->button2->hide();
-    buttons->button3->setEffect("show", 0);
+    buttons->button3->setEffect(tr("show"), 0);
     buttons->button3->hide();
-    buttons->button4->setEffect("Check", 0);
+    buttons->button4->setEffect(tr("Check"), 0);
 
     connect(buttons->button3, SIGNAL(clicked()),
             this, SLOT(trButton3()));
@@ -47,7 +47,7 @@ void InputCard::setData(const CardEntry* data) {
 void InputCard::checkAnswer() {
     if(correct == answer->toPlainText()) {
         emit writeToStatus(MessageType::CORRECT, CardType::INPUT);
-        buttons->button4->setEffect("Next", 1);
+        buttons->button4->setEffect(tr("Next"), 1);
     } else {
         emit writeToStatus(MessageType::WRONG, CardType::INPUT);
         buttons->button3->show();
@@ -56,7 +56,7 @@ void InputCard::checkAnswer() {
 
 
 void InputCard::nextCard() {
-    buttons->button4->setEffect("Check", 0);
+    buttons->button4->setEffect(tr("Check"), 0);
     buttons->button3->hide();
     CardEntry* card = CardManager::getCardManager()->getCard();
     setData(card);

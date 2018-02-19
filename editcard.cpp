@@ -13,10 +13,10 @@ EditingCard::EditingCard(QWidget *parent) : QWidget(parent) {
     layout->addWidget(buttons);
     setLayout(layout);
 
-    buttons->button1->setEffect("&Back", 0);
-    buttons->button2->setEffect("Delete", 0);
-    buttons->button3->setEffect("&Save", 0);
-    buttons->button4->setEffect("&Next", 0);
+    buttons->button1->setEffect(tr("&Back"), 0);
+    buttons->button2->setEffect(tr("Delete"), 0);
+    buttons->button3->setEffect(tr("&Save"), 0);
+    buttons->button4->setEffect(tr("&Next"), 0);
 
     QObject::connect(buttons->button1, SIGNAL(clicked()),
                      this, SLOT(previousCard()));

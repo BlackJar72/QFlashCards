@@ -7,6 +7,7 @@
 #include <QLabel>
 #include <QSizePolicy>
 #include <QFileDialog>
+#include <QTextBrowser>
 #include "filehandler.h"
 
 //#include <iostream>
@@ -167,4 +168,28 @@ void QFlashCards::on_actionNew_triggered()
 {
     CardManager::getCardManager()->newCardGroup();
     on_actionNewCards_triggered();
+}
+
+void QFlashCards::on_actionHelp_triggered()
+{
+    QTextBrowser* helpview = new QTextBrowser;
+    helpview->setEnabled(true);
+    helpview->setSource(QString("qrc:///html/help.html"));
+    setCentralWidget(helpview);
+}
+
+void QFlashCards::on_actionAbout_triggered()
+{
+    QTextBrowser* helpview = new QTextBrowser;
+    helpview->setEnabled(true);
+    helpview->setSource(QString("qrc:///html/about.html"));
+    setCentralWidget(helpview);
+}
+
+void QFlashCards::on_actionLicense_triggered()
+{
+    QTextBrowser* helpview = new QTextBrowser;
+    helpview->setEnabled(true);
+    helpview->setSource(QString("qrc:///html/GPL3.html"));
+    setCentralWidget(helpview);
 }
