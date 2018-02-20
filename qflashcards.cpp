@@ -8,9 +8,12 @@
 #include <QSizePolicy>
 #include <QFileDialog>
 #include <QTextBrowser>
+#include <QDesktopServices>
+#include <QUrl>
 #include "filehandler.h"
 
-//#include <iostream>
+const QString GPL("https://www.gnu.org/licenses/gpl-3.0.en.html");
+const QUrl GPLURL(GPL);
 
 QFlashCards::QFlashCards(QWidget *parent) :
     QMainWindow(parent),
@@ -23,6 +26,11 @@ QFlashCards::QFlashCards(QWidget *parent) :
 QFlashCards::~QFlashCards()
 {
     delete ui;
+}
+
+
+void QFlashCards::setWorkingDir(QString dir) {
+    this->dir = dir;
 }
 
 
@@ -147,7 +155,7 @@ void QFlashCards::on_actionLoad_triggered()
     QString fileName
             = QFileDialog::getOpenFileName(
                 this, tr("Open File"),
-                QCoreApplication::applicationDirPath(),
+                dir,
                 tr("Flashcards (*.qfcml)"));
     FileHandler handler;
     handler.readFile(fileName);
@@ -158,7 +166,7 @@ void QFlashCards::on_actionSave_triggered()
     QString fileName
             = QFileDialog::getSaveFileName(
                 this, tr("Save Flashcards"),
-                QCoreApplication::applicationDirPath(),
+                dir,
                 tr("Flashcards (*.qfcml)"));
     FileHandler handler;
     handler.saveFile(fileName);
@@ -188,9 +196,5 @@ void QFlashCards::on_actionAbout_triggered()
 
 void QFlashCards::on_actionLicense_triggered()
 {
-    QTextBrowser* helpview = new QTextBrowser;
-    helpview->setEnabled(true);
-    helpview->setOpenLinks(true);
-    helpview->setSource(QString("qrc:///html/GPL3.html"));
-    setCentralWidget(helpview);
+    QDesktopServices::openUrl(GPLURL);
 }

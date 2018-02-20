@@ -19,6 +19,7 @@ class QFlashCards : public QMainWindow
 
 public:
     explicit QFlashCards(QWidget *parent = 0);
+    void setWorkingDir(QString dir);
     ~QFlashCards();
 
 private slots:    
@@ -31,17 +32,11 @@ private slots:
     void gotoCard(CardType card);
     void gotoNextCard(CardType card);
     void gotoShowAnswer(CardType card);
-
     void on_actionLoad_triggered();
-
     void on_actionSave_triggered();
-
     void on_actionNew_triggered();
-
     void on_actionHelp_triggered();
-
     void on_actionAbout_triggered();
-
     void on_actionLicense_triggered();
 
 private:
@@ -51,6 +46,7 @@ private:
     CreateCard* createNewCards;
     EditingCard* editCards;
     ButtonPanel* buttons;
+    QString dir;
     void gotoFreeResponce();
 };
 

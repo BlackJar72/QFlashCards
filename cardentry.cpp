@@ -22,7 +22,7 @@ CardEntry::CardEntry(QObject *parent) : QObject(parent)
  * for consistency.
  */
 void CardEntry::setData(const QString& question, const QString& answer,
-                        bool reversable = true, bool canBeFree = true) {
+                        bool reversable, bool canBeFree) {
     this->question   = question;
     this->answer     = answer;
     this->reversable = reversable;
