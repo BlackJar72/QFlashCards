@@ -5,6 +5,10 @@
 #include <QHBoxLayout>
 #include "mutablebutton.h"
 
+/**
+ * This class is a four button widget that is to be 
+ * re-used as the button bar for all card presentations.
+ */
 class ButtonPanel : public QWidget
 {
     Q_OBJECT

@@ -10,7 +10,8 @@
 
 /**
  * This class represents a set of flash cards that can be
- * used for study.
+ * used for study.  All cards currently in memory will be 
+ * part of this structure.
  *
  * @brief The CardGroup class
  */

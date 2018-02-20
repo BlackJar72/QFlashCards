@@ -7,6 +7,11 @@
 #include "buttonpanel.h"
 #include "enumcardtype.h"
 
+/**
+ * A message giving widget which is used to give large 
+ * messages to the user as the central widget.  This is 
+ * used to give feedback to answers in quiz mode.
+ */
 class CentralLabel : public QWidget
 {
     Q_OBJECT

@@ -4,6 +4,15 @@
 #include "cardentry.h"
 #include <QList>
 
+/**
+ * This class hold a reference to the in-use CardGroup, 
+ * allowing a consistent and transparent access to the 
+ * CardGroup which may actually be replaced or recreated 
+ * behind the scenes.  Most methods of this class simply 
+ * wrap methods of the same name hidden in the CardGroup. 
+ * Exceptions are those that act as getters for the 
+ * CardGroup's pointer or its own singleton pointer.
+ */
 class CardManager
 {
 public:

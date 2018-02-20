@@ -27,12 +27,18 @@ CentralLabel::CentralLabel(QWidget *parent) :
 }
 
 
-
+/**
+ * Sets what text will be displayed.
+ */
 void CentralLabel::setText(QString text) {
     label->setText("<CENTER><H1><B>" + text + "</B></H1></CENTER>");
 }
 
 
+/**
+ * A convenience function, this will will set the text for 
+ * a correct response.
+ */
 void CentralLabel::setCorrect() {
     setText("Correct!");
     setButton(buttons->button4, "Next", MessageType::CORRECT);
@@ -40,6 +46,10 @@ void CentralLabel::setCorrect() {
 }
 
 
+/**
+ * A convenience function, this will will set the text for 
+ * an incorrect response.
+ */
 void CentralLabel::setWrong() {
     setText("Wrong!");
     setButton(buttons->button4, "Try Again", MessageType::WRONG);
@@ -47,17 +57,27 @@ void CentralLabel::setWrong() {
 }
 
 
+/**
+ * Sets properties for one the buttons in its buttons.
+ */
 void CentralLabel::setButton(MutableButton* button, char* text, int value) {
     button->setEffect(tr(text), value);
     button->show();
 }
 
 
+/**
+ * Sets what kind of cards it will be.
+ */
 void CentralLabel::setCardType(CardType caller) {
     stimulus = caller;
 }
 
 
+/**
+ * Sets the message for either a correct of incorrect 
+ * responce based on enum data.
+ */
 void CentralLabel::setMessage(MessageType msg) {
     switch (msg) {
     case MessageType::CORRECT:
@@ -70,7 +90,6 @@ void CentralLabel::setMessage(MessageType msg) {
         break;
     }
 }
-
 
 
 void CentralLabel::trButton3() {
