@@ -9,7 +9,7 @@ const QString wrongText("Wrong");
 
 InputCard::InputCard(QWidget *parent) : QWidget(parent)
 {
-    question = new QLabel(this);
+    question = new QTextBrowser(this);
     answer   = new QTextEdit(this);
     buttons = new ButtonPanel(this);
 

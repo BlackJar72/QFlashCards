@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QWidget>
 #include <QTextEdit>
+#include <QTextBrowser>
 #include <QVBoxLayout>
 #include <QLabel>
 
@@ -25,8 +26,8 @@ public slots:
     void lastCard();
 
 private:
-    QLabel* question;
-    QLabel* answer;
+    QTextBrowser* question;
+    QTextBrowser* answer;
     ButtonPanel* buttons;
     QVBoxLayout* layout;
 };

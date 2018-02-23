@@ -6,8 +6,8 @@
 
 ReviewCard::ReviewCard(QWidget *parent) : QWidget(parent)
 {    
-    question = new QLabel(this);
-    answer  = new QLabel(this);
+    question = new QTextBrowser(this);
+    answer  = new QTextBrowser(this);
     buttons = new ButtonPanel(this);
 
     layout = new QVBoxLayout;

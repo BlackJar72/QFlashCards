@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QWidget>
 #include <QTextEdit>
+#include <QTextBrowser>
 #include <QLabel>
 #include <QVBoxLayout>
 
@@ -28,7 +29,7 @@ public slots:
     void trButton4();
 
 private:
-    QLabel* question;
+    QTextBrowser* question;
     QTextEdit* answer;
     ButtonPanel* buttons;
     QVBoxLayout* layout;

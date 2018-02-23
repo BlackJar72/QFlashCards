@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qflashcards>
+    <card>
+        <question>* User ID and password management
+* Account access restrictions
+* Account management guidelines
+* Multiple account guidelines
+* Correctness monitoring</question>
+        <answer>Acount management security controls</answer>
+    </card>
+    <card>
+        <question>11 Mbps in the 2.4 GHz band, with a range up to 1000' feet unindered or 200'-400' indoors</question>
+        <answer>802.11b</answer>
+    </card>
+    <card>
+        <question>54 Mbs in the 2.4 GHz band and compatible with 802.11b</question>
+        <answer>802.11g</answer>
+    </card>
+    <card>
+        <question>64 to 256 bit security, using RC4, but easily cracked and obsolete (do not use!)</question>
+        <answer>WEP</answer>
+    </card>
+    <card>
+        <question>802.11</question>
+        <answer>Family of IEEE standards from wireless networks</answer>
+    </card>
+    <card>
+        <question>A VPN based on HTTP over SSL which encapsulates and IP packet with its headers and headers for the protocol.</question>
+        <answer>SSTP</answer>
+    </card>
+    <card>
+        <question>A Windows service enabling DHCP which works when IPs would otherwise be unobtainable</question>
+        <answer>APIPA</answer>
+    </card>
+    <card>
+        <question>A form of DDoS protection, often assocaited with distributed data centers, which triggers mitigation</question>
+        <answer>Flood Gate</answer>
+    </card>
+    <card>
+        <question>A free and open source version of LDAP.</question>
+        <answer>OpenLDAP</answer>
+    </card>
+    <card>
+        <question>A lightweight version of Microsoft Active Directory.</question>
+        <answer>ADAM</answer>
+    </card>
+    <card>
+        <question>A proprietary protocol which replaces HTML with WML to transmit data to wireless devices</question>
+        <answer>WAP</answer>
+    </card>
+    <card>
+        <question>A version of OpenLDAP made by Apple for MacOS X.</question>
+        <answer>Open Directory</answer>
+    </card>
+    <card>
+        <question>ADAM</question>
+        <answer>Active Directory Application Mode</answer>
+    </card>
+    <card>
+        <question>APIPA</question>
+        <answer>Automated Private IP Addressing</answer>
+    </card>
+    <card>
+        <question>ATM</question>
+        <answer>Asynchronous Transfer Mode</answer>
+    </card>
+    <card>
+        <question>Adds Quality of Service (QoS) over a wireless LAN</question>
+        <answer>802.11e</answer>
+    </card>
+    <card>
+        <question>And improved version of RADIUS</question>
+        <answer>Diameter</answer>
+    </card>
+    <card>
+        <question>Authentication protocol is extensible by plugins enabling a choice of athentication types</question>
+        <answer>EAP</answer>
+    </card>
+    <card>
+        <question>CHAP</question>
+        <answer>Challenge Handshake Authentication Protocol</answer>
+    </card>
+    <card>
+        <question>Centralizes various security techniques and technologies</question>
+        <answer>UTM</answer>
+    </card>
+    <card>
+        <question>Collection of protocols, policies, and hardward to govern access.	</question>
+        <answer>NAC</answer>
+    </card>
+    <card>
+        <question>Collects info for diagnostics and maintenence</question>
+        <answer>SNMP</answer>
+    </card>
+    <card>
+        <question>Counter mode with cipher block chaining message authentication code protocol</question>
+        <answer>CCMP</answer>
+    </card>
+    <card>
+        <question>Disabling unused ports and services, and hiding status detection are forms of </question>
+        <answer>Port Security</answer>
+    </card>
+    <card>
+        <question>EAP</question>
+        <answer>Extensible Authentication Protocol</answer>
+    </card>
+    <card>
+        <question>EIGRP</question>
+        <answer>Enhanced Interior Gateway Routing Protocol</answer>
+    </card>
+    <card>
+        <question>Enhanced RIP with IP tables, subnet masking, authentication, and multicast packets.</question>
+        <answer>RIPv2</answer>
+    </card>
+    <card>
+        <question>FCoE</question>
+        <answer>Fibre Channel over Ethernet</answer>
+    </card>
+    <card>
+        <question>From Microsoft and has character generator, date-time, dsicard, and quote of the day</question>
+        <answer>Simple TCP/IP Services</answer>
+    </card>
+    <card>
+        <question>GNU's open source version of PGP</question>
+        <answer>GPG</answer>
+    </card>
+    <card>
+        <question>GPG</question>
+        <answer>GNU Privacy Guards</answer>
+    </card>
+    <card>
+        <question>HMAC</question>
+        <answer>Hash-based Message Authentication Code</answer>
+    </card>
+    <card>
+        <question>HOTP</question>
+        <answer>HMAC based Onetime Password</answer>
+    </card>
+    <card>
+        <question>Has:
+* TKIP, AES, CCMP, and EAP
+* Cipher Mode with Block Chaining
+* MAC based access regulation</question>
+        <answer>WPA</answer>
+    </card>
+    <card>
+        <question>IDS</question>
+        <answer>Intrusion Detection System</answer>
+    </card>
+    <card>
+        <question>IEE standard family for wireless networking</question>
+        <answer>802.11</answer>
+    </card>
+    <card>
+        <question>IEEE stadard to provide port-based authentication; uses EAP</question>
+        <answer>802.11x</answer>
+    </card>
+    <card>
+        <question>L2TP</question>
+        <answer>Layer Two Tunneling Protocol</answer>
+    </card>
+    <card>
+        <question>LDAP</question>
+        <answer>Lightweight Directory Access Protocol</answer>
+    </card>
+    <card>
+        <question>LEAP</question>
+        <answer>Lightweight EAP</answer>
+    </card>
+    <card>
+        <question>Links data storage networks via IP accross WANs without encryption.</question>
+        <answer>iSCSI</answer>
+    </card>
+    <card>
+        <question>Microsoft's directory service with administrative control and resource access control, which has ACLs and scheme for creating accounts.</question>
+        <answer>Microsoft Active Directory</answer>
+    </card>
+    <card>
+        <question>Microsofts VPN for older Windows version (obsolete)
+(aka, Microsoft VPN layer 2)</question>
+        <answer>PPTP</answer>
+    </card>
+    <card>
+        <question>NAC</question>
+        <answer>Network Access Control</answer>
+    </card>
+    <card>
+        <question>NAS</question>
+        <answer>Network Access Service</answer>
+    </card>
+    <card>
+        <question>NAT</question>
+        <answer>Network Address Translation</answer>
+    </card>
+    <card>
+        <question>NIDS</question>
+        <answer>Network Intrusion Detection System</answer>
+    </card>
+    <card>
+        <question>NPS</question>
+        <answer>Network Policy Server</answer>
+    </card>
+    <card>
+        <question>Open source directory service for multiples OS's, which has LDAP3 Directory Service Markup Language (version 2).</question>
+        <answer>OpenDS</answer>
+    </card>
+    <card>
+        <question>Oracle's 64bit directory service for large networks that may need scaling.</question>
+        <answer>Java System Directory Server</answer>
+    </card>
+    <card>
+        <question>PAP</question>
+        <answer>Password Authentication Protocol</answer>
+    </card>
+    <card>
+        <question>PEAP</question>
+        <answer>Protected EAP</answer>
+    </card>
+    <card>
+        <question>PGP</question>
+        <answer>Pretty Good Privacy</answer>
+    </card>
+    <card>
+        <question>PPTP</question>
+        <answer>Point to Point Tunneling Protocol</answer>
+    </card>
+    <card>
+        <question>Part of WAP which uses public key crptography with mutual authentication</question>
+        <answer>WTLS</answer>
+    </card>
+    <card>
+        <question>Point to Point Protocol over ATM</question>
+        <answer>PPPoA</answer>
+    </card>
+    <card>
+        <question>Point to Point Protocol over Ethernet</question>
+        <answer>PPPoE</answer>
+    </card>
+    <card>
+        <question>Port number for FTP commands</question>
+        <answer>21</answer>
+    </card>
+    <card>
+        <question>Port number for FTP data (server side)</question>
+        <answer>20</answer>
+    </card>
+    <card>
+        <question>Port number used by SMTP</question>
+        <answer>25</answer>
+    </card>
+    <card>
+        <question>Portnumber used by telnet</question>
+        <answer>23</answer>
+    </card>
+    <card>
+        <question>Prot number for SSH</question>
+        <answer>22</answer>
+    </card>
+    <card>
+        <question>Protocol that uses port #25</question>
+        <answer>SMTP</answer>
+    </card>
+    <card>
+        <question>Protocol that uses port 22</question>
+        <answer>SSH</answer>
+    </card>
+    <card>
+        <question>Protocol that uses port number 23</question>
+        <answer>Telnet</answer>
+    </card>
+    <card>
+        <question>Protocol that uses ports 20 and 21</question>
+        <answer>FTP</answer>
+    </card>
+    <card>
+        <question>RADIUS</question>
+        <answer>Remote Authentication Dial-in Service</answer>
+    </card>
+    <card>
+        <question>RADIUS done by Microsoft which helps administer VPNs.</question>
+        <answer>NPS</answer>
+    </card>
+    <card>
+        <question>RAS</question>
+        <answer>Remote Accesss Server</answer>
+    </card>
+    <card>
+        <question>RDP</question>
+        <answer>Remote Desktop Protocol</answer>
+    </card>
+    <card>
+        <question>RIP</question>
+        <answer>Routing Information Protocol</answer>
+    </card>
+    <card>
+        <question>Requires web based log-in to use a wireless network</question>
+        <answer>Captive portal</answer>
+    </card>
+    <card>
+        <question>SAML</question>
+        <answer>Security Assertion Markup Language</answer>
+    </card>
+    <card>
+        <question>SNMP</question>
+        <answer>Simple Network Management Protocol</answer>
+    </card>
+    <card>
+        <question>SSID</question>
+        <answer>Service Set ID</answer>
+    </card>
+    <card>
+        <question>SSTP</question>
+        <answer>Secure Socket Tunneling Protocol</answer>
+    </card>
+    <card>
+        <question>Similar to iSCSI, but cabling is more expensive (still no encryption)</question>
+        <answer>Fibre Channel</answer>
+    </card>
+    <card>
+        <question>TACACS</question>
+        <answer>Terminal Access Control Access Control System</answer>
+    </card>
+    <card>
+        <question>TKIP</question>
+        <answer>Temporal Key Integrity Protocol</answer>
+    </card>
+    <card>
+        <question>The port number for DNS</question>
+        <answer>53</answer>
+    </card>
+    <card>
+        <question>The port number for HTTPS</question>
+        <answer>443</answer>
+    </card>
+    <card>
+        <question>The port number for IMAP mail</question>
+        <answer>143</answer>
+    </card>
+    <card>
+        <question>The port number for NetBIOS</question>
+        <answer>139</answer>
+    </card>
+    <card>
+        <question>The port number used by HTTP</question>
+        <answer>80</answer>
+    </card>
+    <card>
+        <question>The port use by FTPS for data </question>
+        <answer>989</answer>
+    </card>
+    <card>
+        <question>The port used by FTPS for commands</question>
+        <answer>990</answer>
+    </card>
+    <card>
+        <question>The port used by POP3</question>
+        <answer>110</answer>
+    </card>
+    <card>
+        <question>The port used by RDP (Remote Desktop Protocol)</question>
+        <answer>3389</answer>
+    </card>
+    <card>
+        <question>The protocol that runs on port 143</question>
+        <answer>IMAP</answer>
+    </card>
+    <card>
+        <question>The protocol that runs on port 443</question>
+        <answer>HTTPS</answer>
+    </card>
+    <card>
+        <question>The protocol that uses 3389</question>
+        <answer>RDP</answer>
+    </card>
+    <card>
+        <question>The protocol that uses port 110</question>
+        <answer>POP3</answer>
+    </card>
+    <card>
+        <question>The protocol that uses port 53</question>
+        <answer>DNS</answer>
+    </card>
+    <card>
+        <question>The protocol that uses port number 80</question>
+        <answer>HTTP</answer>
+    </card>
+    <card>
+        <question>The protocol that uses ports 990 and 989</question>
+        <answer>FTPS</answer>
+    </card>
+    <card>
+        <question>The protocol the runs on port number 139</question>
+        <answer>NetBIOS</answer>
+    </card>
+    <card>
+        <question>This is one thing that includes communication over sessions, connectionless datagrams, and name registration.</question>
+        <answer>NetBIOS</answer>
+    </card>
+    <card>
+        <question>Timed HMAC based onetime password</question>
+        <answer>TOTP</answer>
+    </card>
+    <card>
+        <question>UTM</question>
+        <answer>Unified Threat Management</answer>
+    </card>
+    <card>
+        <question>Up to 54 Mbps in 6 GHz band, maximum range of 60' (1999)</question>
+        <answer>802.11a</answer>
+    </card>
+    <card>
+        <question>Up to 600 Mbps, using either the 2.4 GHz or 5 GHz band</question>
+        <answer>802.11n</answer>
+    </card>
+    <card>
+        <question>WAP</question>
+        <answer>Wireless Application Protocol</answer>
+    </card>
+    <card>
+        <question>WEP</question>
+        <answer>Wireless Equipment Privacy</answer>
+    </card>
+    <card>
+        <question>WIDS</question>
+        <answer>Wireless Intrusion Detection System</answer>
+    </card>
+    <card>
+        <question>WPA</question>
+        <answer>Wifi Protected Access</answer>
+    </card>
+    <card>
+        <question>WTLS</question>
+        <answer>WIreless Transport Layer Security</answer>
+    </card>
+    <card>
+        <question>Wider 5 GHz band, 1300 Mbps (or 3466 Mbps by some sources)</question>
+        <answer>802.11ac</answer>
+    </card>
+    <card>
+        <question>iSCSI</question>
+        <answer>Internet Small Computer System Interface</answer>
+    </card>
+</qflashcards>
