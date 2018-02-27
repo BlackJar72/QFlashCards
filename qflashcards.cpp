@@ -114,7 +114,7 @@ void QFlashCards::gotoCard(CardType card) {
 void QFlashCards::gotoNextCard(CardType card) {
     switch(card) {
         case CardType::INPUT:
-            on_actionFree_Responce_triggered();
+            gotoFreeResponce();
             break;
         default:
             break;
