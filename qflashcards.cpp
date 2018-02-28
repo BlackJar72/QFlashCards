@@ -113,8 +113,13 @@ void QFlashCards::gotoCard(CardType card) {
 
 void QFlashCards::gotoNextCard(CardType card) {
     switch(card) {
-        case CardType::INPUT:
-            on_actionFree_Responce_triggered();
+        case CardType::INPUT:            
+			freeResponceCard = new InputCard(this);			
+			freeResponceCard->setData(CardManager::getCardManager()->getCard());
+			setCentralWidget(freeResponceCard);
+			connect(freeResponceCard, &InputCard::writeToStatus,
+					this, &QFlashCards::showSpecialText);
+			centralWidget()->showNormal();
             break;
         default:
             break;
