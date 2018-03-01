@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-    QString dir = QCoreApplication::applicationDirPath();
+    QString dir = QDir::homePath();
     if(argc > 1) {
 		// If called on a file, try to open the file and 
 		// keep the current directory (likely that of the 
@@ -22,16 +22,13 @@ int main(int argc, char *argv[])
         } else {
             FileHandler loader;
             loader.readFile(inFile);
+			dir = QFile(info.canonicalPath());
         }
-    } else {
-		// Set path typically, incase globally installed
-        // (e.g., installed in /user/bin)
-        dir = QDir::homePath();
-        QDir::setCurrent(dir);
     }
     QApplication a(argc, argv);
     a.setWindowIcon(QIcon(":/img/IndexCard32.png"));
     QFlashCards w;
+	QDir::setCurrent(dir);
     w.setWorkingDir(dir);
     w.setWindowTitle("Flash Cards");
     w.show();
