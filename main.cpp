@@ -9,7 +9,6 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
     QString dir = QCoreApplication::applicationDirPath();
     if(argc > 1) {
 		// If called on a file, try to open the file and 
@@ -30,6 +29,7 @@ int main(int argc, char *argv[])
         dir = QDir::homePath();
         QDir::setCurrent(dir);
     }
+    QApplication a(argc, argv);
     a.setWindowIcon(QIcon(":/img/IndexCard32.png"));
     QFlashCards w;
     w.setWorkingDir(dir);
