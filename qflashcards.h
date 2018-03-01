@@ -22,8 +22,10 @@ public:
     void setWorkingDir(QString dir);
     ~QFlashCards();
 
-private slots:    
+public slots:
     void showSpecialText(MessageType msg, CardType caller);
+
+private slots:
     void on_actionExit_triggered();
     void on_actionReview_triggered();
     void on_actionFree_Responce_triggered();
