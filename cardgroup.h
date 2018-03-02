@@ -9,14 +9,6 @@
 #include <chrono>
 
 
-struct NameData {
-	QString name;
-	bool    named;
-    NameData() : name(QString("")), named(0) {}
-    void setName(QString& name) {this->name = name; named = true; }
-};
-
-
 /**
  * This class represents a set of flash cards that can be
  * used for study.  All cards currently in memory will be 
@@ -43,8 +35,6 @@ public:
     CardEntry* getNewCard();
     void removeCard(CardEntry* in);
     CardEntry* removeCurrent();
-    const NameData* getName() const;
-    void setName(QString& name);
 
 
 signals:
@@ -55,7 +45,6 @@ private:
     int current;
     bool atEnd;
     QList<CardEntry*>* cards;
-    NameData deckName;
     CardGroup();
 };
 

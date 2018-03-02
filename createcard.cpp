@@ -37,7 +37,7 @@ void CreateCard::setData(CardEntry* data) {
 
 
 void CreateCard::updateCardData() {
-    card->setData(question->toPlainText(), answer->toPlainText(), true, true);
+    card->setData(question->toPlainText(), answer->toPlainText());
     CardManager::getCardManager()->addCard(card);
 }
 

@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     QFlashCards w;
 	QDir::setCurrent(dir);
     w.setWorkingDir(dir);
-    w.setWindowTitle(tr("Flash Cards"));
+    w.setWindowTitle("Flash Cards");
     w.show();
 
     return a.exec();

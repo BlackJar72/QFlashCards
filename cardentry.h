@@ -28,12 +28,9 @@ class CardEntry : public QObject
 
 public:
     explicit CardEntry(QObject *parent = 0);
-    void setData(const QString& question, const QString& answer,
-                 bool reversable = true, bool canBeFree = true);
+    void setData(const QString& question, const QString& answer);
     QString getQuestion() const;
     QString getAnswer() const;
-    bool isFreeReversable() const;
-    bool isGoodForInput() const;
 
 signals:
 
@@ -42,8 +39,6 @@ public slots:
 private:
     QString question;
     QString answer;
-    bool reversable;
-    bool canBeFree;
 };
 
 #endif // CARDENTRY_H

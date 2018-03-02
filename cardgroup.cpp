@@ -5,8 +5,7 @@ CardGroup::CardGroup(QObject *parent)
         :  QObject(parent),
            current(0),
            atEnd(false),
-           cards(new QList<CardEntry*>()),
-           deckName(NameData()) {}
+           cards(new QList<CardEntry*>()) {}
 
 
 /**
@@ -188,15 +187,5 @@ CardEntry* CardGroup::getCardAt(int i) {
     if((i >= 0) && (i < cards->length())) {
         return cards->at(i);
     } else return 0;
-}
-
-
-const NameData* CardGroup::getName() const {
-    return &deckName;
-}
-
-
-void CardGroup::setName(QString& name) {
-    deckName.setName(name);
 }
 

@@ -39,7 +39,7 @@ CardEntry* readCard(QXmlStreamReader* reader) {
         reader->readNext();
         done = done || reader->atEnd();
     }
-    card->setData(question, answer, true, true);
+    card->setData(question, answer);
     return card;
 }
 

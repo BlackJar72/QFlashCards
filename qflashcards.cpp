@@ -10,6 +10,7 @@
 #include <QTextBrowser>
 #include <QDesktopServices>
 #include <QUrl>
+#include <QFileInfo>
 #include "filehandler.h"
 
 const QString GPL("https://www.gnu.org/licenses/gpl-3.0.en.html");
@@ -84,7 +85,7 @@ void QFlashCards::on_actionNewCards_triggered()
     createNewCards->setData(CardManager::getCardManager()->getNewCard());
     setCentralWidget(createNewCards);
     centralWidget()->showNormal();	
-	setWindowTitle(tr("Flash Cards").append(" - untitled");
+    setWindowTitle(tr("Flash Cards").append(" - untitled"));
 }
 
 void QFlashCards::on_actionEdit_Cards_triggered()
@@ -163,9 +164,12 @@ void QFlashCards::on_actionLoad_triggered()
                 this, tr("Open File"),
                 dir,
                 tr("Flashcards (*.qfcml)"));
+    if(fileName.isEmpty()) {
+        return;
+    }
     FileHandler handler;
     handler.readFile(fileName);
-	setWindowTitle(tr("Flash Cards").append(" - ").append(fileName));
+    upDateTileWName(fileName);
 }
 
 void QFlashCards::on_actionSave_triggered()
@@ -175,12 +179,18 @@ void QFlashCards::on_actionSave_triggered()
                 this, tr("Save Flashcards"),
                 dir,
                 tr("Flashcards (*.qfcml)"));
-	if(fileName.isEmpty()) {
-		fileName = QString(tr("untitled");
-	}
+    if(fileName.isEmpty()) {
+        return;
+    }
     FileHandler handler;
+    QFile file(fileName);
+    QFileInfo info(file);
+    // This should never really occur now
+    if(info.isDir()) {
+        fileName.append("untitled.qfcml");
+    }
     handler.saveFile(fileName);
-	setWindowTitle(tr("Flash Cards").append(" - ").append(fileName));
+    upDateTileWName(fileName);
 }
 
 void QFlashCards::on_actionNew_triggered()
@@ -208,4 +218,19 @@ void QFlashCards::on_actionAbout_triggered()
 void QFlashCards::on_actionLicense_triggered()
 {
     QDesktopServices::openUrl(GPLURL);
+}
+
+void QFlashCards::upDateTileWName(const QString& fileName) {
+    QFile file(fileName);
+    QFileInfo info(file);
+    QString name = info.fileName();
+    int dot = name.lastIndexOf(".");
+    int len = name.length() - dot;
+    if(dot > - 1) {
+        name.remove(dot, len);
+    }
+    setWindowTitle(tr("Flash Cards")
+                   .append(" - ")
+                   .append(name));
+    setWorkingDir(info.canonicalPath());
 }

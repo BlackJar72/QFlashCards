@@ -35,8 +35,6 @@ public:
     CardEntry* removeCurrent();
     QList<CardEntry*>* getDataModel();
     void newCardGroup();
-    const NameData* getName() const;
-    void setName(QString& name);
 
 private:
     CardGroup* cardGroup;

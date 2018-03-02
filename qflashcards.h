@@ -50,6 +50,7 @@ private:
     ButtonPanel* buttons;
     QString dir;
     void gotoFreeResponce();
+    void upDateTileWName(const QString& fileName);
 };
 
 #endif // QFLASHCARDS_H

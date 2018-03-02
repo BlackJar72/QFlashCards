@@ -2,14 +2,9 @@
 /**
  * This default constructor.
  */
-CardEntry::CardEntry(QObject *parent) : QObject(parent)
-{
-    question = QString("");
-    answer   = QString("");
-
-    reversable = true;
-    canBeFree  = true;
-}
+CardEntry::CardEntry(QObject *parent) :
+        QObject(parent),
+        question(QString()), answer(QString()) {}
 
 
 /**
@@ -21,12 +16,9 @@ CardEntry::CardEntry(QObject *parent) : QObject(parent)
  * for possible future use; for now they should simply be true 
  * for consistency.
  */
-void CardEntry::setData(const QString& question, const QString& answer,
-                        bool reversable, bool canBeFree) {
+void CardEntry::setData(const QString& question, const QString& answer) {
     this->question   = question;
     this->answer     = answer;
-    this->reversable = reversable;
-    this->canBeFree  = canBeFree;
 }
 
 
@@ -51,21 +43,5 @@ QString CardEntry::getQuestion() const {
  */
 QString CardEntry::getAnswer() const {
     return answer;
-}
-
-
-/**
- * Returns one of the currently unused booleans
- */
-bool CardEntry::isFreeReversable() const {
-    return reversable;
-}
-
-
-/**
- * Returns one of the currently unused booleans
- */
-bool CardEntry::isGoodForInput() const {
-    return canBeFree;
 }
 
