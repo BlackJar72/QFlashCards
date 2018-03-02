@@ -164,6 +164,7 @@ void QFlashCards::on_actionLoad_triggered()
                 tr("Flashcards (*.qfcml)"));
     FileHandler handler;
     handler.readFile(fileName);
+	setWindowTitle(tr("Flash Cards").append(" ").append(fileName));
 }
 
 void QFlashCards::on_actionSave_triggered()
@@ -173,8 +174,12 @@ void QFlashCards::on_actionSave_triggered()
                 this, tr("Save Flashcards"),
                 dir,
                 tr("Flashcards (*.qfcml)"));
+	if(fileName.isEmpty()) {
+		fileName = QString(tr("untitled");
+	}
     FileHandler handler;
     handler.saveFile(fileName);
+	setWindowTitle(tr("Flash Cards").append(" ").append(fileName));
 }
 
 void QFlashCards::on_actionNew_triggered()
