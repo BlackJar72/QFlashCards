@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
         } else {
             FileHandler loader;
             loader.readFile(inFile);
-			dir = QFile(info.canonicalPath());
+            dir = info.canonicalPath();
         }
     }
     QApplication a(argc, argv);

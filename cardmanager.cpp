@@ -111,3 +111,13 @@ void CardManager::newCardGroup() {
     delete cardGroup;
     cardGroup = new CardGroup(0);
 }
+
+
+const NameData* CardManager::getName() const {
+    return cardGroup->getName();
+}
+
+
+void CardManager::setName(QString& name) {
+    cardGroup->setName(name);
+}

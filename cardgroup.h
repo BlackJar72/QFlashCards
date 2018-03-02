@@ -8,11 +8,13 @@
 #include <random>
 #include <chrono>
 
+
 struct NameData {
 	QString name;
 	bool    named;
-	NameData() : name(QString("")), named(0) {}
-}
+    NameData() : name(QString("")), named(0) {}
+    void setName(QString& name) {this->name = name; named = true; }
+};
 
 
 /**
@@ -41,7 +43,8 @@ public:
     CardEntry* getNewCard();
     void removeCard(CardEntry* in);
     CardEntry* removeCurrent();
-	//NameData& getName() const;
+    const NameData* getName() const;
+    void setName(QString& name);
 
 
 signals:
@@ -52,7 +55,7 @@ private:
     int current;
     bool atEnd;
     QList<CardEntry*>* cards;
-	//NameData name;
+    NameData deckName;
     CardGroup();
 };
 
