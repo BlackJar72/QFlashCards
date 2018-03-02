@@ -83,7 +83,8 @@ void QFlashCards::on_actionNewCards_triggered()
     CardManager::getCardManager()->reset();
     createNewCards->setData(CardManager::getCardManager()->getNewCard());
     setCentralWidget(createNewCards);
-    centralWidget()->showNormal();
+    centralWidget()->showNormal();	
+	setWindowTitle(tr("Flash Cards").append(" - untitled");
 }
 
 void QFlashCards::on_actionEdit_Cards_triggered()
@@ -164,7 +165,7 @@ void QFlashCards::on_actionLoad_triggered()
                 tr("Flashcards (*.qfcml)"));
     FileHandler handler;
     handler.readFile(fileName);
-	setWindowTitle(tr("Flash Cards").append(" ").append(fileName));
+	setWindowTitle(tr("Flash Cards").append(" - ").append(fileName));
 }
 
 void QFlashCards::on_actionSave_triggered()
@@ -179,7 +180,7 @@ void QFlashCards::on_actionSave_triggered()
 	}
     FileHandler handler;
     handler.saveFile(fileName);
-	setWindowTitle(tr("Flash Cards").append(" ").append(fileName));
+	setWindowTitle(tr("Flash Cards").append(" - ").append(fileName));
 }
 
 void QFlashCards::on_actionNew_triggered()
