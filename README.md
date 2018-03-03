@@ -12,10 +12,11 @@ priming effect that can occur with constant order stimuli.
 
 Binaries can be found at:
 
-  *for Linux: http://www.mediafire.com/file/de3za5zkowc8mrr/QFlashCards.exe
+For Linux: http://www.mediafire.com/file/bop8mev2kbekjii/QFlashCards
   
-  *for Windows: http://www.mediafire.com/file/bop8mev2kbekjii/QFlashCards
+For Windows: http://www.mediafire.com/file/de3za5zkowc8mrr/QFlashCards.exe
 
+(Sorry, no fancy auto-installers or rpm/deb files, just the raw, but samll, executable.)
 
 This project is free and open source, and presented in the hopes that it will interesting and/or 
 useful, but with no warranty or guarantee of any kind whatsoever.  It is released under the 
