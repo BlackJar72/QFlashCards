@@ -3,6 +3,8 @@
 A simple virtual flashcards app in written in C++ with Qt. I created the mostly for my own use 
 in studying.  It is my first useful, native-code gui app.
 
+![QFlashCards](https://s20.postimg.org/g43w4pbl9/QFlash_Cards.png)
+
 My hope is that it will allow students to easily create and use their own virtual flash cards,
 store them for later use, and allow three levels study: simple review, multiple choice, and 
 free responce.  That is to allow varying levels of difficulty and learning, recall being a 
