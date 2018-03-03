@@ -11,7 +11,9 @@ presentation as this also improves the depth and flexibility of learning be elim
 priming effect that can occur with constant order stimuli.
 
 Binaries can be found at:
+
   *for Linux: http://www.mediafire.com/file/de3za5zkowc8mrr/QFlashCards.exe
+  
   *for Windows: http://www.mediafire.com/file/bop8mev2kbekjii/QFlashCards
 
 
