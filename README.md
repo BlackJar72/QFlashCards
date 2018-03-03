@@ -12,7 +12,9 @@ more difficult task and deeper level of learning than recognition.  In addition,
 presentation as this also improves the depth and flexibility of learning be eliminating the 
 priming effect that can occur with constant order stimuli.
 
-Binaries can be found at:
+Web-Page: https://www.opendesktop.org/p/1215420/
+
+Binaries can also be found at:
 
 For Linux: http://www.mediafire.com/file/bop8mev2kbekjii/QFlashCards
   
