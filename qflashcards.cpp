@@ -84,8 +84,7 @@ void QFlashCards::on_actionNewCards_triggered()
     CardManager::getCardManager()->reset();
     createNewCards->setData(CardManager::getCardManager()->getNewCard());
     setCentralWidget(createNewCards);
-    centralWidget()->showNormal();	
-    setWindowTitle(tr("Flash Cards").append(" - untitled"));
+    centralWidget()->showNormal();
 }
 
 void QFlashCards::on_actionEdit_Cards_triggered()
