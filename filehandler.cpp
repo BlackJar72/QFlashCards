@@ -70,6 +70,7 @@ void FileHandler::readFile(QString fileName) {
         return;
     }
     CardManager::getCardManager()->newCardGroup();
+    CardManager::getCardManager()->setFileName(fileName);
     QXmlStreamReader reader(&file);
     while(reader.readNextStartElement()) {
         if(reader.name() == "card") {
@@ -102,7 +103,8 @@ void FileHandler::saveFile(QString fileName) {
     }
     CardManager* manager = CardManager::getCardManager();
     manager->sort();
-    manager->reset();    
+    manager->reset();
+    manager->setFileName(fileName);
     QXmlStreamWriter writer(&file);
     writer.setAutoFormatting(true);
     writer.writeStartDocument();

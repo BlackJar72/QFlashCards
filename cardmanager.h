@@ -35,6 +35,8 @@ public:
     CardEntry* removeCurrent();
     QList<CardEntry*>* getDataModel();
     void newCardGroup();
+    QString* getFileName();
+    void setFileName(const QString& aPath);
 
 private:
     CardGroup* cardGroup;

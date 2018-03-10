@@ -111,3 +111,11 @@ void CardManager::newCardGroup() {
     delete cardGroup;
     cardGroup = new CardGroup(0);
 }
+
+QString* CardManager::getFileName() {
+    return cardGroup->getFileName();
+}
+
+void CardManager::setFileName(const QString& aPath) {
+    cardGroup->setFileName(aPath);
+}

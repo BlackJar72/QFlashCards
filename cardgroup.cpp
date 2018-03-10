@@ -5,7 +5,8 @@ CardGroup::CardGroup(QObject *parent)
         :  QObject(parent),
            current(0),
            atEnd(false),
-           cards(new QList<CardEntry*>()) {}
+           cards(new QList<CardEntry*>()),
+           file(new QString()) {}
 
 
 /**
@@ -187,5 +188,18 @@ CardEntry* CardGroup::getCardAt(int i) {
     if((i >= 0) && (i < cards->length())) {
         return cards->at(i);
     } else return 0;
+}
+
+
+
+QString* CardGroup::getFileName() {
+    return file;
+}
+
+
+
+void CardGroup::setFileName(const QString& aPath) {
+     file->clear();
+     file->append(aPath);
 }
 

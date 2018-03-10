@@ -11,7 +11,9 @@
 #include <QDesktopServices>
 #include <QUrl>
 #include <QFileInfo>
+#include <QDebug>
 #include "filehandler.h"
+
 
 const QString GPL("https://www.gnu.org/licenses/gpl-3.0.en.html");
 const QUrl GPLURL(GPL);
@@ -169,9 +171,29 @@ void QFlashCards::on_actionLoad_triggered()
     FileHandler handler;
     handler.readFile(fileName);
     upDateTileWName(fileName);
+    on_actionReview_triggered();
 }
 
 void QFlashCards::on_actionSave_triggered()
+{   QString* fileName = CardManager::getCardManager()->getFileName();
+    if(fileName->isEmpty()) {
+        qDebug() << "Card was empty";
+        on_actionSave_As_triggered();
+    } else {
+        FileHandler handler;
+        QFile file(*fileName);
+        QFileInfo info(file);
+        // This should never really occur now
+        if(info.isDir()) {
+            fileName->append("untitled.qfcml");
+        }
+        handler.saveFile(*fileName);
+        upDateTileWName(*fileName);
+    }
+}
+
+
+void QFlashCards::on_actionSave_As_triggered()
 {
     QString fileName
             = QFileDialog::getSaveFileName(
@@ -191,6 +213,7 @@ void QFlashCards::on_actionSave_triggered()
     handler.saveFile(fileName);
     upDateTileWName(fileName);
 }
+
 
 void QFlashCards::on_actionNew_triggered()
 {

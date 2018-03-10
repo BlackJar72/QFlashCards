@@ -35,7 +35,8 @@ public:
     CardEntry* getNewCard();
     void removeCard(CardEntry* in);
     CardEntry* removeCurrent();
-
+    QString* getFileName();
+    void setFileName(const QString& aPath);
 
 signals:
 
@@ -45,7 +46,7 @@ private:
     int current;
     bool atEnd;
     QList<CardEntry*>* cards;
-    CardGroup();
+    QString* file;
 };
 
 #endif // CARDGROUP_H
