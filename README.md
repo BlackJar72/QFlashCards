@@ -14,11 +14,11 @@ priming effect that can occur with constant order stimuli.
 
 Binaries can also be found at:
 
-For Linux: http://www.mediafire.com/file/bop8mev2kbekjii/QFlashCards
+For Linux: http://www.mediafire.com/file/8bocpati5lj43tb/QFlashCards.1.4.tar.gz
   
-For Windows: http://www.mediafire.com/file/de3za5zkowc8mrr/QFlashCards.exe
+For Windows: http://www.mediafire.com/file/6djh00mau3rds7s/QFlashCards-1-4.zip
 
-(Sorry, no fancy auto-installers or rpm/deb files, just the raw, but samll, executable.)
+Or on its SourceForge page: https://sourceforge.net/projects/qflashcards/
 
 This project is free and open source, and presented in the hopes that it will interesting and/or 
 useful, but with no warranty or guarantee of any kind whatsoever.  It is released under the 
