@@ -14,9 +14,9 @@ priming effect that can occur with constant order stimuli.
 
 Binaries can also be found at:
 
-For Linux: http://www.mediafire.com/file/8bocpati5lj43tb/QFlashCards.1.4.tar.gz
+For Linux: http://www.mediafire.com/file/7phdwdzoaw9hd7w/QFlashCards.1.5.tar.gz
   
-For Windows: http://www.mediafire.com/file/6djh00mau3rds7s/QFlashCards-1-4.zip
+For Windows: http://www.mediafire.com/file/kzczt8vm2fydcp2/QFlashCards-1-5.zip
 
 Or on its SourceForge page: https://sourceforge.net/projects/qflashcards/
 
