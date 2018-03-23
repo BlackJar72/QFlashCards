@@ -214,6 +214,7 @@ void QFlashCards::on_actionSave_As_triggered()
     if(info.isDir()) {
         fileName.append("untitled.qfcml");
     }
+    statusBar()->showMessage(tr("Saved File"), 2000);
     handler.saveFile(fileName);
     upDateTileWName(fileName);
 }
