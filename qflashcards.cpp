@@ -85,6 +85,8 @@ void QFlashCards::on_actionNewCards_triggered()
     CardManager::getCardManager()->sort();
     CardManager::getCardManager()->reset();
     createNewCards->setData(CardManager::getCardManager()->getNewCard());
+    statusBar()->showMessage(tr("New Deck Started"), 2000);
+    setWindowTitle(tr("Flash Cards"));
     setCentralWidget(createNewCards);
     centralWidget()->showNormal();
 }
@@ -168,6 +170,7 @@ void QFlashCards::on_actionLoad_triggered()
     if(fileName.isEmpty()) {
         return;
     }
+    statusBar()->showMessage(tr("Loaded File"), 2000);
     FileHandler handler;
     handler.readFile(fileName);
     upDateTileWName(fileName);
@@ -187,6 +190,7 @@ void QFlashCards::on_actionSave_triggered()
         if(info.isDir()) {
             fileName->append("untitled.qfcml");
         }
+        statusBar()->showMessage(tr("Saved File"), 2000);
         handler.saveFile(*fileName);
         upDateTileWName(*fileName);
     }
