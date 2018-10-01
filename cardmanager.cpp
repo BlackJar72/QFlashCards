@@ -79,7 +79,7 @@ void CardManager::removeCard(CardEntry* in) {
 
 
 CardEntry* CardManager::removeCurrent() {
-    cardGroup->removeCurrent();
+    return cardGroup->removeCurrent();
 }
 
 void CardManager::shuffle() {
