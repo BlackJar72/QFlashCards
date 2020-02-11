@@ -3,7 +3,7 @@
 A simple virtual flashcards app in written in C++ with Qt. I created the mostly for my own use 
 in studying.  It is my first useful, native-code gui app.
 
-[QFlash-Cards.png](https://postimg.cc/pm8nD6SB)
+[![QFlash-Cards.png](https://i.postimg.cc/XY1c0Mct/QFlash-Cards.png)](https://postimg.cc/pm8nD6SB)
 
 ![QFlashCards](https://s20.postimg.org/g43w4pbl9/QFlash_Cards.png)
 
