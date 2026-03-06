@@ -10,14 +10,6 @@ more difficult task and deeper level of learning than recognition.  In addition,
 presentation as this also improves the depth and flexibility of learning be eliminating the 
 priming effect that can occur with constant order stimuli.
 
-Binaries can also be found at:
-
-For Linux: http://www.mediafire.com/file/ddj947gcd8uydgj/QFlashCards.1.5.1.tar.gz
-  
-For Windows: http://www.mediafire.com/file/cqfx8wbefr41afm/QFlashCards-1-5-1.zip
-
-Or on its SourceForge page: https://sourceforge.net/projects/qflashcards/
-
 This project is free and open source, and presented in the hopes that it will interesting and/or 
 useful, but with no warranty or guarantee of any kind whatsoever.  It is released under the 
 GNU Public License version 3.0.  Please read the licenses for more information.
