@@ -1,5 +1,7 @@
 # QFlashCards
 
+## Due to the flurry of new age verification laws I do not have the infrastructure to comply with, I will not be making or working on videogames or any other standalone software applications. ##
+
 A simple virtual flashcards app in written in C++ with Qt. I created the mostly for my own use 
 in studying.  It is my first useful, native-code gui app.
 
